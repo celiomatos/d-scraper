@@ -1,15 +1,27 @@
+--liquibase formatted sql
+
+--changeset celio:19
+
 create schema quartz;
 
+--rollback drop schema scraper;
+
+--changeset celio:20
+
 create table quartz.scheduler_job_info (
-  id bigserial,
+  job_id bigserial,
   cron_expression varchar(255),
   cron_job boolean NOT NULL,
   job_enable boolean NOT NULL,
   job_group varchar(255) NOT NULL,
-  job_name varchar(255) NOT NULL,
+  job_name varchar(255) NOT NULL UNIQUE,
   repeat_time bigint,
   primary key (id)
 );
+
+--rollback drop table quartz.scheduler_job_info;
+
+--changeset celio:21
 
 create table quartz.job_details (
     job_name character varying(128) NOT NULL,
@@ -24,6 +36,10 @@ create table quartz.job_details (
     job_data bytea,
 	primary key (sched_name, job_name, job_group)
 );
+
+--rollback drop table quartz.job_details;
+
+--changeset celio:22
 
 create table quartz.triggers (
     trigger_name character varying(80) NOT NULL,
@@ -46,6 +62,10 @@ create table quartz.triggers (
 	foreign key (sched_name, job_name, job_group) references quartz.job_details(sched_name, job_name, job_group)
 );
 
+--rollback drop table quartz.triggers;
+
+--changeset celio:23
+
 create table quartz.simple_triggers (
     trigger_name character varying(80) NOT NULL,
     trigger_group character varying(80) NOT NULL,
@@ -57,6 +77,10 @@ create table quartz.simple_triggers (
 	foreign key (sched_name, trigger_name, trigger_group) references quartz.triggers(sched_name, trigger_name, trigger_group)
 );
 
+--rollback drop table quartz.simple_triggers;
+
+--changeset celio:24
+
 create table quartz.cron_triggers (
     trigger_name character varying(80) NOT NULL,
     trigger_group character varying(80) NOT NULL,
@@ -66,6 +90,10 @@ create table quartz.cron_triggers (
 	primary key (sched_name, trigger_name, trigger_group),
 	foreign key (sched_name, trigger_name, trigger_group) references quartz.triggers(sched_name, trigger_name, trigger_group)
 );
+
+--rollback drop table quartz.cron_triggers;
+
+--changeset celio:25
 
 create table quartz.simprop_triggers (
     sched_name character varying(120) NOT NULL,
@@ -86,6 +114,10 @@ create table quartz.simprop_triggers (
 	foreign key (sched_name, trigger_name, trigger_group) references quartz.triggers(sched_name, trigger_name, trigger_group)
 );
 
+--rollback drop table quartz.simprop_triggers;
+
+--changeset celio:26
+
 create table quartz.blob_triggers (
     trigger_name character varying(80) NOT NULL,
     trigger_group character varying(80) NOT NULL,
@@ -95,6 +127,10 @@ create table quartz.blob_triggers (
 	foreign key (sched_name, trigger_name, trigger_group) references quartz.triggers(sched_name, trigger_name, trigger_group)
 );
 
+--rollback drop table quartz.blob_triggers;
+
+--changeset celio:27
+
 create table quartz.calendars (
     calendar_name character varying(80) NOT NULL,
     calendar text NOT NULL,
@@ -102,12 +138,19 @@ create table quartz.calendars (
 	primary key (sched_name, calendar_name)
 );
 
+--rollback drop table quartz.calendars;
+
+--changeset celio:28
+
 create table quartz.paused_trigger_grps (
     trigger_group character varying(80) NOT NULL,
     sched_name character varying(120) DEFAULT 'TestScheduler'::character varying NOT NULL,
 	primary key (sched_name, trigger_group)
 );
 
+--rollback drop table quartz.paused_trigger_grps;
+
+--changeset celio:29
 
 create table quartz.fired_triggers (
     entry_id character varying(95) NOT NULL,
@@ -127,6 +170,10 @@ create table quartz.fired_triggers (
 	primary key (sched_name, entry_id)
 );
 
+--rollback drop table quartz.fired_triggers;
+
+--changeset celio:30
+
 create table quartz.scheduler_state (
     instance_name character varying(200) NOT NULL,
     last_checkin_time bigint,
@@ -135,36 +182,113 @@ create table quartz.scheduler_state (
 	primary key (sched_name, instance_name)
 );
 
+--rollback drop table quartz.scheduler_state;
+
+--changeset celio:31
+
 create table quartz.locks (
     lock_name character varying(40) NOT NULL,
     sched_name character varying(120) DEFAULT 'TestScheduler'::character varying NOT NULL,
 	primary key (sched_name, lock_name)
 );
 
+--rollback drop table quartz.locks;
+
+--changeset celio:32
+
 create index on quartz.job_details(sched_name, requests_recovery);
+
+--changeset celio:33
+
 create index on quartz.job_details(sched_name,job_group);
+
+--changeset celio:34
+
 create index on quartz.blob_triggers(sched_name,trigger_name, trigger_group);
+
+--changeset celio:35
+
 create index on quartz.triggers(sched_name,job_name,job_group);
+
+--changeset celio:36
+
 create index on quartz.triggers(sched_name,job_group);
+
+--changeset celio:37
+
 create index on quartz.triggers(sched_name,calendar_name);
+
+--changeset celio:38
+
 create index on quartz.triggers(sched_name,trigger_group);
+
+--changeset celio:39
+
 create index on quartz.triggers(sched_name,trigger_state);
+
+--changeset celio:40
+
 create index on quartz.triggers(sched_name,trigger_name,trigger_group,trigger_state);
+
+--changeset celio:41
+
 create index on quartz.triggers(sched_name,trigger_group,trigger_state);
+
+--changeset celio:42
+
 create index on quartz.triggers(sched_name,next_fire_time);
+
+--changeset celio:43
+
 create index on quartz.triggers(sched_name,trigger_state,next_fire_time);
+
+--changeset celio:44
+
 create index on quartz.triggers(sched_name,misfire_instr,next_fire_time);
+
+--changeset celio:45
+
 create index on quartz.triggers(sched_name,misfire_instr,next_fire_time,trigger_state);
+
+--changeset celio:46
+
 create index on quartz.triggers(sched_name,misfire_instr,next_fire_time,trigger_group,trigger_state);
+
+--changeset celio:47
+
 create index on quartz.fired_triggers(sched_name,instance_name);
+
+--changeset celio:48
+
 create index on quartz.fired_triggers(sched_name,instance_name,requests_recovery);
+
+
+--changeset celio:49
+
 create index on quartz.fired_triggers(sched_name,job_name,job_group);
+
+--changeset celio:50
+
 create index on quartz.fired_triggers(sched_name,job_group);
+
+--changeset celio:51
+
 create index on quartz.fired_triggers(sched_name,trigger_name,trigger_group);
+
+--changeset celio:52
+
 create index on quartz.fired_triggers(sched_name,trigger_group);
+
+--changeset celio:53
 
 INSERT INTO quartz.scheduler_job_info (cron_expression, job_enable, job_group, job_name, cron_job, repeat_time)
 	VALUES ('0 0/5 * ? * *', TRUE, 'default-group', 'job-a', TRUE, NULL);
 
+--rollback delete from quartz.scheduler_job_info where job_name = 'job-a';
+
+--changeset celio:54
+
 INSERT INTO quartz.scheduler_job_info (cron_expression, job_enable, job_group, job_name, cron_job, repeat_time)
 	VALUES (NULL, TRUE, 'default-group', 'job-b', FALSE, '600000');
+
+--rollback delete from quartz.scheduler_job_info where job_name = 'job-b';

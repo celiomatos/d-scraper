@@ -1,0 +1,37 @@
+package br.com.dscraper.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Setter
+@Getter
+@Entity
+@AllArgsConstructor
+@Table(name = "orgao", schema = "scraper")
+public class Orgao implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "org_id", nullable = false)
+    private Long id;
+
+    @Column(name = "org_codigo", length = 6)
+    private String codigo;
+
+    @Column(name = "org_sigla", length = 30)
+    private String sigla;
+
+    @Column(name = "org_orgao", length = 150, nullable = false)
+    private String orgao;
+
+    @Column(name = "org_nome", length = 150)
+    private String nome;
+
+    @Column(name = "org_esfera", nullable = false)
+    private short esfera;
+
+}

@@ -14,7 +14,7 @@ public class SchedulerJobInfo implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
+    @Column(name = "job_id", unique = true, nullable = false)
     private Long id;
 
     @Column(name = "job_name", unique = true, nullable = false)
