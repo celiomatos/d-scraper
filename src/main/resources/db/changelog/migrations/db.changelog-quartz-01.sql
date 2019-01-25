@@ -10,13 +10,13 @@ create schema quartz;
 
 create table quartz.scheduler_job_info (
   job_id bigserial,
-  cron_expression varchar(255),
-  cron_job boolean NOT NULL,
+  job_cron_expression varchar(255),
+  job_cron boolean NOT NULL,
   job_enable boolean NOT NULL,
   job_group varchar(255) NOT NULL,
   job_name varchar(255) NOT NULL UNIQUE,
-  repeat_time bigint,
-  primary key (id)
+  job_repeat_time bigint,
+  primary key (job_id)
 );
 
 --rollback drop table quartz.scheduler_job_info;
@@ -281,14 +281,14 @@ create index on quartz.fired_triggers(sched_name,trigger_group);
 
 --changeset celio:53
 
-INSERT INTO quartz.scheduler_job_info (cron_expression, job_enable, job_group, job_name, cron_job, repeat_time)
+INSERT INTO quartz.scheduler_job_info (job_cron_expression, job_enable, job_group, job_name, job_cron, job_repeat_time)
 	VALUES ('0 0/5 * ? * *', TRUE, 'default-group', 'job-a', TRUE, NULL);
 
 --rollback delete from quartz.scheduler_job_info where job_name = 'job-a';
 
 --changeset celio:54
 
-INSERT INTO quartz.scheduler_job_info (cron_expression, job_enable, job_group, job_name, cron_job, repeat_time)
+INSERT INTO quartz.scheduler_job_info (job_cron_expression, job_enable, job_group, job_name, job_cron, job_repeat_time)
 	VALUES (NULL, TRUE, 'default-group', 'job-b', FALSE, '600000');
 
 --rollback delete from quartz.scheduler_job_info where job_name = 'job-b';

@@ -41,18 +41,18 @@ public class SchedulerServiceImpl implements SchedulerService {
             Scheduler scheduler = schedulerFactoryBean.getScheduler();
             jobInfoList.forEach(jobInfo -> {
                 try {
-                    JobKey jobKey = new JobKey(jobInfo.getJobName(), jobInfo.getJobGroup());
+                    JobKey jobKey = new JobKey(jobInfo.getName(), jobInfo.getGroup());
                     JobDetail jobDetail = newJobDetail(jobKey);
 
-                    if (jobInfo.isJobEnable() && !scheduler.checkExists(jobDetail.getKey())) {
+                    if (jobInfo.isEnable() && !scheduler.checkExists(jobDetail.getKey())) {
                         Trigger trigger;
                         jobDetail = createJobDetail(jobKey);
 
-                        if (jobInfo.isCronJob() && CronExpression.isValidExpression(jobInfo.getCronExpression())) {
-                            trigger = scheduleCreator.createCronTrigger(jobInfo.getJobName(), new Date(),
+                        if (jobInfo.isCron() && CronExpression.isValidExpression(jobInfo.getCronExpression())) {
+                            trigger = scheduleCreator.createCronTrigger(jobInfo.getName(), new Date(),
                                     jobInfo.getCronExpression(), SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW);
                         } else {
-                            trigger = scheduleCreator.createSimpleTrigger(jobInfo.getJobName(), new Date(),
+                            trigger = scheduleCreator.createSimpleTrigger(jobInfo.getName(), new Date(),
                                     jobInfo.getRepeatTime(), SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW);
                         }
 
@@ -71,7 +71,7 @@ public class SchedulerServiceImpl implements SchedulerService {
         try {
             Scheduler scheduler = schedulerFactoryBean.getScheduler();
 
-            JobKey jobKey = new JobKey(jobInfo.getJobName(), jobInfo.getJobGroup());
+            JobKey jobKey = new JobKey(jobInfo.getName(), jobInfo.getGroup());
             JobDetail jobDetail = newJobDetail(jobKey);
 
             if (!scheduler.checkExists(jobDetail.getKey())) {
@@ -79,11 +79,11 @@ public class SchedulerServiceImpl implements SchedulerService {
                 jobDetail = createJobDetail(jobKey);
 
                 Trigger trigger;
-                if (jobInfo.isCronJob()) {
-                    trigger = scheduleCreator.createCronTrigger(jobInfo.getJobName(), new Date(), jobInfo.getCronExpression(),
+                if (jobInfo.isCron()) {
+                    trigger = scheduleCreator.createCronTrigger(jobInfo.getName(), new Date(), jobInfo.getCronExpression(),
                             SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW);
                 } else {
-                    trigger = scheduleCreator.createSimpleTrigger(jobInfo.getJobName(), new Date(), jobInfo.getRepeatTime(),
+                    trigger = scheduleCreator.createSimpleTrigger(jobInfo.getName(), new Date(), jobInfo.getRepeatTime(),
                             SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW);
                 }
 
@@ -100,15 +100,15 @@ public class SchedulerServiceImpl implements SchedulerService {
     @Override
     public void updateScheduleJob(SchedulerJobInfo jobInfo) {
         Trigger newTrigger;
-        if (jobInfo.isCronJob()) {
-            newTrigger = scheduleCreator.createCronTrigger(jobInfo.getJobName(), new Date(), jobInfo.getCronExpression(),
+        if (jobInfo.isCron()) {
+            newTrigger = scheduleCreator.createCronTrigger(jobInfo.getName(), new Date(), jobInfo.getCronExpression(),
                     SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW);
         } else {
-            newTrigger = scheduleCreator.createSimpleTrigger(jobInfo.getJobName(), new Date(), jobInfo.getRepeatTime(),
+            newTrigger = scheduleCreator.createSimpleTrigger(jobInfo.getName(), new Date(), jobInfo.getRepeatTime(),
                     SimpleTrigger.MISFIRE_INSTRUCTION_FIRE_NOW);
         }
         try {
-            schedulerFactoryBean.getScheduler().rescheduleJob(TriggerKey.triggerKey(jobInfo.getJobName()), newTrigger);
+            schedulerFactoryBean.getScheduler().rescheduleJob(TriggerKey.triggerKey(jobInfo.getName()), newTrigger);
             schedulerRepository.save(jobInfo);
         } catch (SchedulerException e) {
             log.error(e.getMessage(), e);
@@ -129,9 +129,9 @@ public class SchedulerServiceImpl implements SchedulerService {
     @Override
     public boolean deleteJob(SchedulerJobInfo jobInfo) {
         try {
-            return schedulerFactoryBean.getScheduler().deleteJob(new JobKey(jobInfo.getJobName(), jobInfo.getJobGroup()));
+            return schedulerFactoryBean.getScheduler().deleteJob(new JobKey(jobInfo.getName(), jobInfo.getGroup()));
         } catch (SchedulerException e) {
-            log.error("Failed to delete job - {}", jobInfo.getJobName(), e);
+            log.error("Failed to delete job - {}", jobInfo.getName(), e);
             return false;
         }
     }
@@ -139,10 +139,10 @@ public class SchedulerServiceImpl implements SchedulerService {
     @Override
     public boolean pauseJob(SchedulerJobInfo jobInfo) {
         try {
-            schedulerFactoryBean.getScheduler().pauseJob(new JobKey(jobInfo.getJobName(), jobInfo.getJobGroup()));
+            schedulerFactoryBean.getScheduler().pauseJob(new JobKey(jobInfo.getName(), jobInfo.getGroup()));
             return true;
         } catch (SchedulerException e) {
-            log.error("Failed to pause job - {}", jobInfo.getJobName(), e);
+            log.error("Failed to pause job - {}", jobInfo.getName(), e);
             return false;
         }
     }
@@ -150,10 +150,10 @@ public class SchedulerServiceImpl implements SchedulerService {
     @Override
     public boolean resumeJob(SchedulerJobInfo jobInfo) {
         try {
-            schedulerFactoryBean.getScheduler().resumeJob(new JobKey(jobInfo.getJobName(), jobInfo.getJobGroup()));
+            schedulerFactoryBean.getScheduler().resumeJob(new JobKey(jobInfo.getName(), jobInfo.getGroup()));
             return true;
         } catch (SchedulerException e) {
-            log.error("Failed to resume job - {}", jobInfo.getJobName(), e);
+            log.error("Failed to resume job - {}", jobInfo.getName(), e);
             return false;
         }
     }
@@ -161,10 +161,10 @@ public class SchedulerServiceImpl implements SchedulerService {
     @Override
     public boolean startJobNow(SchedulerJobInfo jobInfo) {
         try {
-            schedulerFactoryBean.getScheduler().triggerJob(new JobKey(jobInfo.getJobName(), jobInfo.getJobGroup()));
+            schedulerFactoryBean.getScheduler().triggerJob(new JobKey(jobInfo.getName(), jobInfo.getGroup()));
             return true;
         } catch (SchedulerException e) {
-            log.error("Failed to start new job - {}", jobInfo.getJobName(), e);
+            log.error("Failed to start new job - {}", jobInfo.getName(), e);
             return false;
         }
     }

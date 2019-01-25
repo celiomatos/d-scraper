@@ -18,20 +18,20 @@ public class SchedulerJobInfo implements Serializable {
     private Long id;
 
     @Column(name = "job_name", unique = true, nullable = false)
-    private String jobName;
+    private String name;
 
     @Column(name = "job_group", nullable = false)
-    private String jobGroup;
+    private String group;
 
     @Column(name = "job_enable", nullable = false)
-    private boolean jobEnable;
+    private boolean enable;
 
-    @Column(name = "cron_expression")
+    @Column(name = "job_cron_expression")
     private String cronExpression;
 
-    @Column(name = "repeat_time")
+    @Column(name = "job_repeat_time")
     private Long repeatTime;
 
-    @Column(name = "cron_job", nullable = false)
-    private boolean cronJob;
+    @Column(name = "job_cron", nullable = false)
+    private boolean cron;
 }

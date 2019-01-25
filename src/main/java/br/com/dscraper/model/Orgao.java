@@ -26,10 +26,10 @@ public class Orgao implements Serializable {
     private String sigla;
 
     @Column(name = "org_orgao", length = 150, nullable = false)
-    private String orgao;
+    private String nome;
 
     @Column(name = "org_nome", length = 150)
-    private String nome;
+    private String orgName;
 
     @Column(name = "org_esfera", nullable = false)
     private short esfera;

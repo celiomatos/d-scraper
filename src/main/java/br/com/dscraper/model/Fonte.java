@@ -18,8 +18,8 @@ import java.io.Serializable;
 public class Fonte implements Serializable {
 
     @Id
-    @Column(name = "fon_id", nullable = false)
-    private Long id;
+    @Column(name = "fon_id", nullable = false, length = 8)
+    private String id;
 
     @Column(name = "fon_nome", nullable = false, length = 100)
     private String nome;
