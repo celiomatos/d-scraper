@@ -25,9 +25,6 @@ import java.util.List;
 @EnableSwagger2
 public class SwaggerConfig extends WebMvcConfigurationSupport {
 
-    @Value("${build.timestamp}")
-    private String buildTimestamp;
-
     @Value("${security.oauth2.client-id}")
     private String clientId;
 
@@ -38,7 +35,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
     private String tokenUrl;
 
     @Bean
-    public Docket api(BuildProperties buildProperties) {
+    public Docket api() {
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("br.com.dscraper.controller"))
@@ -48,7 +45,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .useDefaultResponseMessages(false);
 
         ApiInfo apiInfo = new ApiInfoBuilder()
-                .title(buildProperties.getName())
+                .title("Scraper")
                 .version("1.0.00")
                 .build();
         docket.apiInfo(apiInfo);
@@ -67,7 +64,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
     private OAuth securitySchema() {
         List<GrantType> grantTypes = new ArrayList();
-        grantTypes.add(new ResourceOwnerPasswordCredentialsGrant(tokenUrl + "?company_id=1"));
+        grantTypes.add(new ResourceOwnerPasswordCredentialsGrant(tokenUrl));
         return new OAuth("oauth2schema", new ArrayList<AuthorizationScope>(), grantTypes);
     }
 
