@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset celio:115
+--changeset celio:89 splitStatements:false
 
 create or replace function insercao_pagamentos() returns trigger language plpgsql as $$
   begin
@@ -29,13 +29,13 @@ create or replace function insercao_pagamentos() returns trigger language plpgsq
   end;
 $$;
 
---changeset celio:116
+--changeset celio:90
 
 create trigger pagamento_anual_trigger
 before insert on scraper.pagamento
 for each row
   execute procedure insercao_pagamentos();
 
---changeset celio:117
+--changeset celio:91
 
 SET constraint_exclusion = on;
