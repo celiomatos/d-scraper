@@ -1,0 +1,905 @@
+2019-02-08 09:28:04.851  INFO 12680 --- [main] br.com.dscraper.DScraperApplication      : Starting DScraperApplication on ITB00120 with PID 12680 (C:\Users\celio.matos\Downloads\compose\d-scraper\target\classes started by celio.matos in C:\Users\celio.matos\Downloads\compose\d-scraper)
+2019-02-08 09:28:04.855  INFO 12680 --- [main] br.com.dscraper.DScraperApplication      : No active profile set, falling back to default profiles: default
+2019-02-08 09:28:05.705  INFO 12680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:28:05.756  INFO 12680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2019-02-08 09:28:06.233  INFO 12680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$66b458bf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:28:06.272  INFO 12680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$ff6220f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:28:06.278  INFO 12680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:28:06.279  INFO 12680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6e9ed5a7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:28:06.281  INFO 12680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$2436c3ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:28:06.284  INFO 12680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:28:07.039  INFO 12680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-02-08 09:28:07.072  INFO 12680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-08 09:28:07.072  INFO 12680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-08 09:28:07.092  INFO 12680 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\TortoiseGit\bin;C:\PostgreSQL\pg10\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\;C:\Users\celio.matos\AppData\Local\Microsoft\WindowsApps;C:\Users\celio.matos\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\celio.matos\.dotnet\tools;C:\Users\celio.matos\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\celio.matos\AppData\Local\Yarn\bin;.]
+2019-02-08 09:28:07.212  INFO 12680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-08 09:28:07.213  INFO 12680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2321 ms
+2019-02-08 09:28:07.403  INFO 12680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-08 09:28:07.574  INFO 12680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-08 09:28:08.560  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 09:28:08.563  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 09:28:08.566  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2019-02-08 09:28:08.581  INFO 12680 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2019-02-08 09:28:08.673  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-02-08 09:28:08.677  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2019-02-08 09:28:08.679  INFO 12680 --- [main] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2019-02-08 09:28:08.680  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-02-08 09:28:08.717  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create schema if not exists scraper
+2019-02-08 09:28:08.720  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:08.724  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::16::celio ran successfully in 18ms
+2019-02-08 09:28:08.724  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MAX(ORDEREXECUTED) FROM public.databasechangelog
+2019-02-08 09:28:09.483  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('16', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 37, '8:d92382be4e8e17659771178f61a793e5', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.492  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.orgao
+(
+  org_id bigserial primary key,
+  org_codigo character varying(6),
+  org_sigla character varying(30),
+  org_orgao character varying(150) not null,
+  org_nome character varying(150),
+  org_esfera smallint not null
+)
+2019-02-08 09:28:09.501  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.504  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::17::celio ran successfully in 13ms
+2019-02-08 09:28:09.506  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('17', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 38, '8:ac157e25fb8ff7935bd76ae2e9c6644d', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.512  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.fonte
+(
+  fon_id character varying(8) primary key,
+  fon_nome character varying(100) not null
+)
+2019-02-08 09:28:09.519  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.523  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::18::celio ran successfully in 12ms
+2019-02-08 09:28:09.524  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('18', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 39, '8:5a8c955e8691f0e1b9ba5b684ceb709b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.531  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.credor
+(
+  cre_id bigserial primary key,
+  cre_nome character varying(100) not null unique,
+  cre_codigo character varying(20)
+)
+2019-02-08 09:28:09.544  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.549  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::19::celio ran successfully in 19ms
+2019-02-08 09:28:09.550  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('19', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 40, '8:43477831c7c98ff870400398f87d7626', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.557  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.classificacao
+(
+  cla_id bigserial primary key,
+  cla_codigo character varying(10),
+  cla_nome character varying(100)
+)
+2019-02-08 09:28:09.565  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.569  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::20::celio ran successfully in 13ms
+2019-02-08 09:28:09.570  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('20', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 41, '8:ab733adbcfc7b8c6c88f1e832e6f2395', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.580  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento
+(
+  pag_id bigserial primary key,
+  pag_date date not null,
+  pag_nr_ob character varying(15),
+  pag_nr_nl character varying(15),
+  pag_nr_ne character varying(15),
+  pag_valor numeric(20,2) not null,
+  pag_org_id bigint not null,
+  pag_cre_id bigint not null,
+  pag_fon_id character varying(8) not null,
+  pag_cla_id bigint,
+  pag_lancamento timestamp without time zone not null default now(),
+  pag_removido boolean not null default false,
+  foreign key (pag_cla_id) references scraper.classificacao (cla_id),
+  foreign key (pag_cre_id) references scraper.credor (cre_id),
+  foreign key (pag_fon_id) references scraper.fonte (fon_id),
+  foreign key (pag_org_id) references scraper.orgao (org_id)
+)
+2019-02-08 09:28:09.599  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.603  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::21::celio ran successfully in 27ms
+2019-02-08 09:28:09.604  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('21', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 42, '8:7e4b46b25185bafa4efa1435c811f59b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.612  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.parametro
+(
+  par_id integer primary key,
+  par_descricao character varying(100) not null,
+  par_atual character varying(2048),
+  par_padrao character varying(2048)
+)
+2019-02-08 09:28:09.623  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.627  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::22::celio ran successfully in 16ms
+2019-02-08 09:28:09.628  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('22', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 43, '8:d87489b2bca90a817358b1ca65ca5f19', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.635  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists classificacao_cla_nome_idx on scraper.classificacao (cla_nome)
+2019-02-08 09:28:09.646  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.650  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::23::celio ran successfully in 15ms
+2019-02-08 09:28:09.652  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('23', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 44, '8:8464c1aaa4a72cce9104d52e8324606f', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.659  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists classificacao_cla_codigo_idx on scraper.classificacao (cla_codigo)
+2019-02-08 09:28:09.666  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.670  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::24::celio ran successfully in 12ms
+2019-02-08 09:28:09.672  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('24', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 45, '8:35379ac8679bf521f0c1097436c59edf', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.678  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists fonte_fon_nome_idx on scraper.fonte (fon_nome)
+2019-02-08 09:28:09.684  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.688  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::25::celio ran successfully in 11ms
+2019-02-08 09:28:09.689  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('25', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 46, '8:fba4e182dfed9fffba2f06294bd60957', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.695  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists orgao_org_codigo_idx on scraper.orgao (org_codigo)
+2019-02-08 09:28:09.701  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.704  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::26::celio ran successfully in 9ms
+2019-02-08 09:28:09.705  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('26', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 47, '8:b04b9939df05dce0441a515616612ae4', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.711  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists orgao_org_sigla_idx on scraper.orgao (org_sigla)
+2019-02-08 09:28:09.718  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.721  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::27::celio ran successfully in 11ms
+2019-02-08 09:28:09.725  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('27', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 48, '8:c50c1ccaa20d935b5571c978b5b13785', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.731  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists orgao_org_orgao_idx on scraper.orgao (org_orgao)
+2019-02-08 09:28:09.738  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.742  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::28::celio ran successfully in 11ms
+2019-02-08 09:28:09.743  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('28', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 49, '8:db967aa469217e6652134c897455607a', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.750  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2011
+(
+   check (pag_date <= date '2011-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.755  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.759  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::29::celio ran successfully in 9ms
+2019-02-08 09:28:09.760  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('29', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 50, '8:13e236d8395a7a6d671eb1606a7e7029', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.767  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2012
+(
+   check (pag_date >= date '2012-01-01' and pag_date <= date '2012-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.771  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.775  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::30::celio ran successfully in 8ms
+2019-02-08 09:28:09.777  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('30', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 51, '8:603bbe5a475c4b75e583c52dec9d4347', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.785  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2013
+(
+   check (pag_date >= date '2013-01-01' and pag_date <= date '2013-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.788  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.792  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::31::celio ran successfully in 8ms
+2019-02-08 09:28:09.793  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('31', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 52, '8:d74804fec0140da955d22917ce1546c7', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.800  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2014
+(
+   check (pag_date >= date '2014-01-01' and pag_date <= date '2014-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.803  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.807  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::32::celio ran successfully in 8ms
+2019-02-08 09:28:09.808  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('32', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 53, '8:71d7598f0373e46d13f46171149426c8', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.815  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2015
+(
+   check (pag_date >= date '2015-01-01' and pag_date <= date '2015-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.818  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.822  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::33::celio ran successfully in 8ms
+2019-02-08 09:28:09.823  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('33', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 54, '8:5aa85ab53bca20555b4f0c2c60748a96', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.830  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2016
+(
+   check (pag_date >= date '2016-01-01' and pag_date <= date '2016-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.834  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.838  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::34::celio ran successfully in 8ms
+2019-02-08 09:28:09.839  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('34', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 55, '8:2e64706fb3156e4295fdad15412ff03b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.844  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2017
+(
+   check (pag_date >= date '2017-01-01' and pag_date <= date '2017-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.848  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.852  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::35::celio ran successfully in 8ms
+2019-02-08 09:28:09.853  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('35', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 56, '8:188d62156e9c5360d193c9d30459aaa1', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.859  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2018
+(
+   check (pag_date >= date '2018-01-01' and pag_date <= date '2018-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.863  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.866  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::36::celio ran successfully in 8ms
+2019-02-08 09:28:09.868  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('36', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 57, '8:071f20f9c8df4f1e79b854bab4891bd2', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.874  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create table if not exists scraper.pagamento_2019
+(
+   check (pag_date >= date '2019-01-01' and pag_date <= date '2019-12-31')
+)
+inherits (scraper.pagamento)
+2019-02-08 09:28:09.878  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.882  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::37::celio ran successfully in 9ms
+2019-02-08 09:28:09.883  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('37', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 58, '8:afe42342da2413552e81235c369198f3', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.890  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2011_pag_date_idx on scraper.pagamento_2011 (pag_date)
+2019-02-08 09:28:09.897  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.901  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::38::celio ran successfully in 11ms
+2019-02-08 09:28:09.903  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('38', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 59, '8:985d86cf34df22e8a0445a9afe8b4fd5', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.909  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2011_pag_org_id_idx on scraper.pagamento_2011 (pag_org_id)
+2019-02-08 09:28:09.918  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.922  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::39::celio ran successfully in 13ms
+2019-02-08 09:28:09.923  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('39', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 60, '8:23aca20604b93aacbe2c87e6c5cebb1b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.930  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2011_pag_cre_id_idx on scraper.pagamento_2011 (pag_cre_id)
+2019-02-08 09:28:09.936  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.940  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::40::celio ran successfully in 11ms
+2019-02-08 09:28:09.942  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('40', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 61, '8:f70f8d5a67f60b31b494f2b8af81b1bf', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.948  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2011_pag_fon_id_idx on scraper.pagamento_2011 (pag_fon_id)
+2019-02-08 09:28:09.956  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.960  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::41::celio ran successfully in 12ms
+2019-02-08 09:28:09.964  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('41', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 62, '8:f32194844404f85a35163471428035a9', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.974  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2011_pag_cla_id_idx on scraper.pagamento_2011 (pag_cla_id)
+2019-02-08 09:28:09.980  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:09.983  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::42::celio ran successfully in 10ms
+2019-02-08 09:28:09.985  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('42', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 63, '8:e75cabc55b4280ea4e359acaaaa8b425', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:09.994  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2012_pag_date_idx on scraper.pagamento_2012 (pag_date)
+2019-02-08 09:28:10.003  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.007  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::43::celio ran successfully in 14ms
+2019-02-08 09:28:10.008  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('43', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 64, '8:46c1500f9f4047f241d6c7b76fa5937c', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.016  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2012_pag_org_id_idx on scraper.pagamento_2012 (pag_org_id)
+2019-02-08 09:28:10.025  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.028  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::44::celio ran successfully in 13ms
+2019-02-08 09:28:10.030  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('44', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 65, '8:10c493372e5ddb4b9d9a7a3d83c230e5', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.036  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2012_pag_cre_id_idx on scraper.pagamento_2012 (pag_cre_id)
+2019-02-08 09:28:10.044  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.048  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::45::celio ran successfully in 12ms
+2019-02-08 09:28:10.049  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('45', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 66, '8:b1d2c4965f8113d75dbfaff77357eec1', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.055  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2012_pag_fon_id_idx on scraper.pagamento_2012 (pag_fon_id)
+2019-02-08 09:28:10.063  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.067  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::46::celio ran successfully in 12ms
+2019-02-08 09:28:10.068  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('46', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 67, '8:d25ba3511d21224e7bc9e1a075d540a1', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.074  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2012_pag_cla_id_idx on scraper.pagamento_2012 (pag_cla_id)
+2019-02-08 09:28:10.080  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.084  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::47::celio ran successfully in 10ms
+2019-02-08 09:28:10.085  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('47', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 68, '8:397531b260968bb8b3003616c40f928d', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.091  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2013_pag_date_idx on scraper.pagamento_2013 (pag_date)
+2019-02-08 09:28:10.098  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.103  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::48::celio ran successfully in 12ms
+2019-02-08 09:28:10.104  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('48', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 69, '8:130ee789c711cff33f6c3ee971eacaed', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.111  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2013_pag_org_id_idx on scraper.pagamento_2013 (pag_org_id)
+2019-02-08 09:28:10.118  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.121  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::49::celio ran successfully in 11ms
+2019-02-08 09:28:10.123  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('49', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 70, '8:777e06e2ac7fe6addf3566bbc977d057', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.129  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2013_pag_cre_id_idx on scraper.pagamento_2013 (pag_cre_id)
+2019-02-08 09:28:10.135  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.138  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::50::celio ran successfully in 9ms
+2019-02-08 09:28:10.139  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('50', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 71, '8:825b3700c449e1985281f52695f7610b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.145  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2013_pag_fon_id_idx on scraper.pagamento_2013 (pag_fon_id)
+2019-02-08 09:28:10.150  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.153  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::51::celio ran successfully in 9ms
+2019-02-08 09:28:10.154  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('51', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 72, '8:ba66f570cb82791b8db81a56bebb6b47', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.161  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2013_pag_cla_id_idx on scraper.pagamento_2013 (pag_cla_id)
+2019-02-08 09:28:10.167  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.170  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::52::celio ran successfully in 10ms
+2019-02-08 09:28:10.171  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('52', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 73, '8:8a34aca9e121a906222d341011ba38bc', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.177  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2014_pag_date_idx on scraper.pagamento_2014 (pag_date)
+2019-02-08 09:28:10.184  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.188  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::53::celio ran successfully in 11ms
+2019-02-08 09:28:10.189  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('53', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 74, '8:6c55ea3559cb6ac4f6802a90c7871f9b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.196  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2014_pag_org_id_idx on scraper.pagamento_2014 (pag_org_id)
+2019-02-08 09:28:10.203  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.207  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::54::celio ran successfully in 12ms
+2019-02-08 09:28:10.208  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('54', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 75, '8:7c7707c7d7513e3227289f7067f7a704', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.215  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2014_pag_cre_id_idx on scraper.pagamento_2014 (pag_cre_id)
+2019-02-08 09:28:10.222  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.226  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::55::celio ran successfully in 12ms
+2019-02-08 09:28:10.228  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('55', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 76, '8:a26ea38252e45d9644e875d87cfb0a01', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.234  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2014_pag_fon_id_idx on scraper.pagamento_2014 (pag_fon_id)
+2019-02-08 09:28:10.241  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.250  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::56::celio ran successfully in 16ms
+2019-02-08 09:28:10.252  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('56', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 77, '8:31646ed5ff133dffa494ef08806c17aa', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.260  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2014_pag_cla_id_idx on scraper.pagamento_2014 (pag_cla_id)
+2019-02-08 09:28:10.268  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.272  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::57::celio ran successfully in 12ms
+2019-02-08 09:28:10.273  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('57', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 78, '8:579df1b9a8527eab61009863504877f4', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.280  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2015_pag_date_idx on scraper.pagamento_2015 (pag_date)
+2019-02-08 09:28:10.287  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.291  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::58::celio ran successfully in 11ms
+2019-02-08 09:28:10.293  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('58', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 79, '8:cebc51e8627d7d1921e0f1429a27da0a', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.300  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2015_pag_org_id_idx on scraper.pagamento_2015 (pag_org_id)
+2019-02-08 09:28:10.307  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.311  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::59::celio ran successfully in 12ms
+2019-02-08 09:28:10.312  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('59', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 80, '8:b85d17a2bda5db20ecf8298583b1ce8d', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.320  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2015_pag_cre_id_idx on scraper.pagamento_2015 (pag_cre_id)
+2019-02-08 09:28:10.329  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.333  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::60::celio ran successfully in 13ms
+2019-02-08 09:28:10.335  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('60', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 81, '8:11fd2d287384fdf2eed8fd47dbb0e721', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.343  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2015_pag_fon_id_idx on scraper.pagamento_2015 (pag_fon_id)
+2019-02-08 09:28:10.353  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.358  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::61::celio ran successfully in 16ms
+2019-02-08 09:28:10.359  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('61', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 82, '8:e8892c8b8a997cd84476b1221cba844d', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.367  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2015_pag_cla_id_idx on scraper.pagamento_2015 (pag_cla_id)
+2019-02-08 09:28:10.375  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.379  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::62::celio ran successfully in 13ms
+2019-02-08 09:28:10.381  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('62', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 83, '8:dd22c09333b35d35f28d8d5f386651d0', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.389  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2016_pag_date_idx on scraper.pagamento_2016 (pag_date)
+2019-02-08 09:28:10.397  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.401  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::63::celio ran successfully in 12ms
+2019-02-08 09:28:10.403  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('63', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 84, '8:b087229f055492c74002b972c448599b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.410  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2016_pag_org_id_idx on scraper.pagamento_2016 (pag_org_id)
+2019-02-08 09:28:10.418  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.422  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::64::celio ran successfully in 12ms
+2019-02-08 09:28:10.423  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('64', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 85, '8:784ceef5816fef4d49fedc03a71a02b5', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.431  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2016_pag_cre_id_idx on scraper.pagamento_2016 (pag_cre_id)
+2019-02-08 09:28:10.438  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.442  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::65::celio ran successfully in 11ms
+2019-02-08 09:28:10.442  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('65', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 86, '8:8eb70a644ecc4cd00a4ab0fdc08e08ab', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.449  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2016_pag_fon_id_idx on scraper.pagamento_2016 (pag_fon_id)
+2019-02-08 09:28:10.456  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.460  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::66::celio ran successfully in 11ms
+2019-02-08 09:28:10.461  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('66', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 87, '8:b4c95f48384207b21ae0cf6df5aeb86b', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.468  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2016_pag_cla_id_idx on scraper.pagamento_2016 (pag_cla_id)
+2019-02-08 09:28:10.476  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.480  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::67::celio ran successfully in 13ms
+2019-02-08 09:28:10.481  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('67', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 88, '8:0ee3e1a2d9463c192dacae3eaf0436f7', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.488  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2017_pag_date_idx on scraper.pagamento_2017 (pag_date)
+2019-02-08 09:28:10.497  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.501  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::68::celio ran successfully in 13ms
+2019-02-08 09:28:10.502  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('68', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 89, '8:6c187df7e6059468dd2bdaaa1cdc3e01', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.509  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2017_pag_org_id_idx on scraper.pagamento_2017 (pag_org_id)
+2019-02-08 09:28:10.516  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.521  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::69::celio ran successfully in 12ms
+2019-02-08 09:28:10.523  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('69', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 90, '8:c8b6e1a83b4d256cbdfde56478aedf17', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.531  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2017_pag_cre_id_idx on scraper.pagamento_2017 (pag_cre_id)
+2019-02-08 09:28:10.539  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.546  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::70::celio ran successfully in 16ms
+2019-02-08 09:28:10.546  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('70', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 91, '8:cae5e8e1bf7a9eb5301a28c0ea97e029', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.554  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2017_pag_fon_id_idx on scraper.pagamento_2017 (pag_fon_id)
+2019-02-08 09:28:10.563  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.567  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::71::celio ran successfully in 13ms
+2019-02-08 09:28:10.568  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('71', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 92, '8:df621fa22d11f2b891832f9cf2dbbd24', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.577  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2017_pag_cla_id_idx on scraper.pagamento_2017 (pag_cla_id)
+2019-02-08 09:28:10.588  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.592  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::72::celio ran successfully in 16ms
+2019-02-08 09:28:10.594  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('72', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 93, '8:4fa5138918145d8a1ea6b38b83f665cd', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.602  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2018_pag_date_idx on scraper.pagamento_2018 (pag_date)
+2019-02-08 09:28:10.611  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.615  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::73::celio ran successfully in 13ms
+2019-02-08 09:28:10.616  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('73', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 94, '8:b3455ed041bab42a6408e1039a545117', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.623  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2018_pag_org_id_idx on scraper.pagamento_2018 (pag_org_id)
+2019-02-08 09:28:10.631  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.635  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::74::celio ran successfully in 12ms
+2019-02-08 09:28:10.636  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('74', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 95, '8:9edc679cb14bdd8db247542715c0b180', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.644  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2018_pag_cre_id_idx on scraper.pagamento_2018 (pag_cre_id)
+2019-02-08 09:28:10.652  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.656  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::75::celio ran successfully in 13ms
+2019-02-08 09:28:10.658  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('75', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 96, '8:78aefec93297668d05a0fc4f15b8f0ae', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.666  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2018_pag_fon_id_idx on scraper.pagamento_2018 (pag_fon_id)
+2019-02-08 09:28:10.673  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.677  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::76::celio ran successfully in 12ms
+2019-02-08 09:28:10.678  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('76', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 97, '8:4a0c1641cbcfac6676b6fc59a06e6f86', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.684  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2018_pag_cla_id_idx on scraper.pagamento_2018 (pag_cla_id)
+2019-02-08 09:28:10.693  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.697  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::77::celio ran successfully in 13ms
+2019-02-08 09:28:10.698  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('77', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 98, '8:35b9cf303cffd499041e94ad8cb79f6c', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.705  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2019_pag_date_idx on scraper.pagamento_2019 (pag_date)
+2019-02-08 09:28:10.712  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.716  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::78::celio ran successfully in 11ms
+2019-02-08 09:28:10.718  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('78', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 99, '8:2a734c9ced8d8f5d04cf19f72e223e87', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.725  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2019_pag_org_id_idx on scraper.pagamento_2019 (pag_org_id)
+2019-02-08 09:28:10.732  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.736  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::79::celio ran successfully in 12ms
+2019-02-08 09:28:10.737  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('79', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 100, '8:3eb628b8ad24967304f75e8dd616bec2', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.745  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2019_pag_cre_id_idx on scraper.pagamento_2019 (pag_cre_id)
+2019-02-08 09:28:10.752  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.756  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::80::celio ran successfully in 12ms
+2019-02-08 09:28:10.758  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('80', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 101, '8:38f6618be029081414ff9f2e8264781e', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.765  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2019_pag_fon_id_idx on scraper.pagamento_2019 (pag_fon_id)
+2019-02-08 09:28:10.772  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.777  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::81::celio ran successfully in 13ms
+2019-02-08 09:28:10.778  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('81', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 102, '8:f3024c30a1c54c2b3a6c3a717fac7d8e', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.785  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create index if not exists pagamento_2019_pag_cla_id_idx on scraper.pagamento_2019 (pag_cla_id)
+2019-02-08 09:28:10.793  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.797  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-01.sql::82::celio ran successfully in 13ms
+2019-02-08 09:28:10.799  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('82', 'celio', 'db/changelog/migrations/db.changelog-scraper-01.sql', NOW(), 103, '8:5c56a145d0e9d8ec6ca3b897ddff7e69', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.810  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create or replace function insercao_pagamentos() returns trigger language plpgsql as $$
+  begin
+  if (new.pag_date <= date '2011-12-31') then
+	  insert into scraper.pagamento_2011 values (new.*);
+  elseif (new.pag_date >= date '2012-01-01' and new.pag_date <= date '2012-12-31') then
+	  insert into scraper.pagamento_2012 values (new.*);
+  elseif (new.pag_date >= date '2013-01-01' and new.pag_date <= date '2013-12-31') then
+	  insert into scraper.pagamento_2013 values (new.*);
+  elseif (new.pag_date >= date '2014-01-01' and new.pag_date <= date '2014-12-31') then
+	  insert into scraper.pagamento_2014 values (new.*);
+  elseif (new.pag_date >= date '2015-01-01' and new.pag_date <= date '2015-12-31') then
+	  insert into scraper.pagamento_2015 values (new.*);
+  elseif (new.pag_date >= date '2016-01-01' and new.pag_date <= date '2016-12-31') then
+	  insert into scraper.pagamento_2016 values (new.*);
+  elseif (new.pag_date >= date '2016-01-01' and new.pag_date <= date '2017-12-31') then
+	  insert into scraper.pagamento_2017 values (new.*);
+  elseif (new.pag_date >= date '2018-01-01' and new.pag_date <= date '2018-12-31') then
+	  insert into scraper.pagamento_2018 values (new.*);
+  elseif (new.pag_date >= date '2019-01-01' and new.pag_date <= date '2019-12-31') then
+	  insert into scraper.pagamento_2019 values (new.*);
+  else
+	  raise exception 'a data não se encontra nos limites estabelecidos para a inserção...';
+  end if;
+  return null;
+  end;
+$$
+2019-02-08 09:28:10.816  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.821  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-02.sql::89::celio ran successfully in 15ms
+2019-02-08 09:28:10.822  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('89', 'celio', 'db/changelog/migrations/db.changelog-scraper-02.sql', NOW(), 104, '8:8e8710ca087c55a238161f9b268cf02c', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.831  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : create trigger pagamento_anual_trigger
+before insert on scraper.pagamento
+for each row
+  execute procedure insercao_pagamentos()
+2019-02-08 09:28:10.834  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.838  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-02.sql::90::celio ran successfully in 8ms
+2019-02-08 09:28:10.842  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('90', 'celio', 'db/changelog/migrations/db.changelog-scraper-02.sql', NOW(), 105, '8:b45c82df9f83323e106b52df9e9f5811', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.849  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : SET constraint_exclusion = on
+2019-02-08 09:28:10.851  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : Custom SQL executed
+2019-02-08 09:28:10.853  INFO 12680 --- [main] liquibase.changelog.ChangeSet            : ChangeSet db/changelog/migrations/db.changelog-scraper-02.sql::91::celio ran successfully in 4ms
+2019-02-08 09:28:10.854  INFO 12680 --- [main] liquibase.executor.jvm.JdbcExecutor      : INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('91', 'celio', 'db/changelog/migrations/db.changelog-scraper-02.sql', NOW(), 106, '8:fb2972fea55caad3b883d6e7e60f4419', 'sql', '', 'EXECUTED', NULL, NULL, '3.6.2', '9632488687')
+2019-02-08 09:28:10.868  INFO 12680 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2019-02-08 09:28:11.086  INFO 12680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:28:11.150  INFO 12680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:28:11.151  INFO 12680 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-08 09:28:11.291  INFO 12680 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:28:11.443  INFO 12680 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-02-08 09:28:11.463  INFO 12680 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-02-08 09:28:11.468  INFO 12680 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@22323229
+2019-02-08 09:28:11.889  INFO 12680 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Credor (class must be instantiated by Interceptor)
+2019-02-08 09:28:12.191  INFO 12680 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Orgao (class must be instantiated by Interceptor)
+2019-02-08 09:28:12.230  INFO 12680 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Pagamento (class must be instantiated by Interceptor)
+2019-02-08 09:28:12.272  INFO 12680 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Classificacao (class must be instantiated by Interceptor)
+2019-02-08 09:28:12.292  INFO 12680 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Parametro (class must be instantiated by Interceptor)
+2019-02-08 09:28:12.308  INFO 12680 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Fonte (class must be instantiated by Interceptor)
+2019-02-08 09:28:12.451  INFO 12680 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:28:13.187  INFO 12680 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-08 09:28:13.729  INFO 12680 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d70494aa-7d2b-437a-97dc-5ff9a60d4f50
+
+2019-02-08 09:28:13.928  INFO 12680 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6528ec61, org.springframework.security.web.context.SecurityContextPersistenceFilter@763e50fc, org.springframework.security.web.header.HeaderWriterFilter@5d60a096, org.springframework.web.filter.CorsFilter@2092639b, org.springframework.security.web.authentication.logout.LogoutFilter@4b9996c, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1f210aa4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@722031ca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23f5ea52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@196c9e42, org.springframework.security.web.session.SessionManagementFilter@13f83654, org.springframework.security.web.access.ExceptionTranslationFilter@7c45bc90, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a1f19e]
+2019-02-08 09:28:14.014  INFO 12680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-08 09:28:14.040  INFO 12680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-08 09:28:14.070  INFO 12680 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-08 09:28:14.214  INFO 12680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-02-08 09:28:14.217  INFO 12680 --- [main] br.com.dscraper.DScraperApplication      : Started DScraperApplication in 9.891 seconds (JVM running for 17.584)
+2019-02-08 09:34:59.158  INFO 15504 --- [main] br.com.dscraper.DScraperApplication      : Starting DScraperApplication on ITB00120 with PID 15504 (C:\Users\celio.matos\Downloads\compose\d-scraper\target\classes started by celio.matos in C:\Users\celio.matos\Downloads\compose\d-scraper)
+2019-02-08 09:34:59.161  INFO 15504 --- [main] br.com.dscraper.DScraperApplication      : No active profile set, falling back to default profiles: default
+2019-02-08 09:35:00.001  INFO 15504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:35:00.044  INFO 15504 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-02-08 09:35:00.589  INFO 15504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d58b1e69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:35:00.640  INFO 15504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6e38e6a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:35:00.646  INFO 15504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:35:00.651  INFO 15504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6b76532b' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:35:00.658  INFO 15504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$930d8955] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:35:00.661  INFO 15504 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:35:01.300  INFO 15504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-02-08 09:35:01.320  INFO 15504 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-08 09:35:01.320  INFO 15504 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-08 09:35:01.329  INFO 15504 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\TortoiseGit\bin;C:\PostgreSQL\pg10\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\;C:\Users\celio.matos\AppData\Local\Microsoft\WindowsApps;C:\Users\celio.matos\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\celio.matos\.dotnet\tools;C:\Users\celio.matos\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\celio.matos\AppData\Local\Yarn\bin;.]
+2019-02-08 09:35:01.402  INFO 15504 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-08 09:35:01.402  INFO 15504 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2203 ms
+2019-02-08 09:35:01.519  INFO 15504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-08 09:35:01.610  INFO 15504 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-08 09:35:02.568  INFO 15504 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 09:35:02.572  INFO 15504 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 09:35:02.581  INFO 15504 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2019-02-08 09:35:02.603  INFO 15504 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2019-02-08 09:35:02.743  INFO 15504 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-02-08 09:35:02.746  INFO 15504 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2019-02-08 09:35:02.749  INFO 15504 --- [main] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2019-02-08 09:35:02.749  INFO 15504 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-02-08 09:35:02.813  INFO 15504 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2019-02-08 09:35:02.923  INFO 15504 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:35:02.979  INFO 15504 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:35:02.980  INFO 15504 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-08 09:35:03.101  INFO 15504 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:35:03.223  INFO 15504 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-02-08 09:35:03.237  INFO 15504 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-02-08 09:35:03.242  INFO 15504 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@1920d3df
+2019-02-08 09:35:03.591  INFO 15504 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Credor (class must be instantiated by Interceptor)
+2019-02-08 09:35:03.736  INFO 15504 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Orgao (class must be instantiated by Interceptor)
+2019-02-08 09:35:03.763  INFO 15504 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Pagamento (class must be instantiated by Interceptor)
+2019-02-08 09:35:03.802  INFO 15504 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Classificacao (class must be instantiated by Interceptor)
+2019-02-08 09:35:03.824  INFO 15504 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Parametro (class must be instantiated by Interceptor)
+2019-02-08 09:35:03.843  INFO 15504 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Fonte (class must be instantiated by Interceptor)
+2019-02-08 09:35:03.956  INFO 15504 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:35:04.532  INFO 15504 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-08 09:35:05.060  INFO 15504 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b41c138c-67e4-4051-9237-2fb81042516c
+
+2019-02-08 09:35:05.306  INFO 15504 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c052d79, org.springframework.security.web.context.SecurityContextPersistenceFilter@88462f4, org.springframework.security.web.header.HeaderWriterFilter@383e64bb, org.springframework.web.filter.CorsFilter@663a0f4, org.springframework.security.web.authentication.logout.LogoutFilter@4a568a74, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@42b3d728, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bf47793, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c06032, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@317af7e0, org.springframework.security.web.session.SessionManagementFilter@5a4ecb1, org.springframework.security.web.access.ExceptionTranslationFilter@5d3471c3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4003e6b4]
+2019-02-08 09:35:05.420  INFO 15504 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-08 09:35:05.465  INFO 15504 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-08 09:35:05.497  INFO 15504 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-08 09:35:05.701  INFO 15504 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-02-08 09:35:05.705  INFO 15504 --- [main] br.com.dscraper.DScraperApplication      : Started DScraperApplication in 7.373 seconds (JVM running for 15.605)
+2019-02-08 09:35:59.323  INFO 15504 --- [http-nio-8083-exec-3] o.apache.coyote.http11.Http11Processor   : The host [d_server_scraper:8083] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: The character [_] is never valid in a domain name.
+	at org.apache.tomcat.util.http.parser.HttpParser$DomainParseState.next(HttpParser.java:926) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.http.parser.HttpParser.readHostDomainName(HttpParser.java:822) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:71) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:288) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:809) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+
+2019-02-08 09:44:02.920  INFO 15212 --- [main] br.com.dscraper.DScraperApplication      : Starting DScraperApplication on ITB00120 with PID 15212 (C:\Users\celio.matos\Downloads\compose\d-scraper\target\classes started by celio.matos in C:\Users\celio.matos\Downloads\compose\d-scraper)
+2019-02-08 09:44:02.923  INFO 15212 --- [main] br.com.dscraper.DScraperApplication      : No active profile set, falling back to default profiles: default
+2019-02-08 09:44:03.974  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 09:44:04.009  INFO 15212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-02-08 09:44:04.651  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eb99a214] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:44:04.757  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$84476a4e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:44:04.790  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:44:04.798  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3d9de372' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:44:04.802  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$a91c0d00] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:44:04.823  INFO 15212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 09:44:05.555  INFO 15212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-02-08 09:44:05.589  INFO 15212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-08 09:44:05.589  INFO 15212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-08 09:44:05.602  INFO 15212 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\TortoiseGit\bin;C:\PostgreSQL\pg10\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\;C:\Users\celio.matos\AppData\Local\Microsoft\WindowsApps;C:\Users\celio.matos\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\celio.matos\.dotnet\tools;C:\Users\celio.matos\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\celio.matos\AppData\Local\Yarn\bin;.]
+2019-02-08 09:44:05.808  INFO 15212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-08 09:44:05.808  INFO 15212 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2833 ms
+2019-02-08 09:44:06.000  INFO 15212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-08 09:44:06.116  INFO 15212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-08 09:44:07.211  INFO 15212 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 09:44:07.215  INFO 15212 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 09:44:07.220  INFO 15212 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2019-02-08 09:44:07.250  INFO 15212 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2019-02-08 09:44:07.390  INFO 15212 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-02-08 09:44:07.393  INFO 15212 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2019-02-08 09:44:07.396  INFO 15212 --- [main] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2019-02-08 09:44:07.396  INFO 15212 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-02-08 09:44:07.455  INFO 15212 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2019-02-08 09:44:07.670  INFO 15212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 09:44:07.737  INFO 15212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 09:44:07.739  INFO 15212 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-08 09:44:07.883  INFO 15212 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 09:44:08.044  INFO 15212 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-02-08 09:44:08.064  INFO 15212 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-02-08 09:44:08.069  INFO 15212 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@683fd25e
+2019-02-08 09:44:08.448  INFO 15212 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Credor (class must be instantiated by Interceptor)
+2019-02-08 09:44:08.726  INFO 15212 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Orgao (class must be instantiated by Interceptor)
+2019-02-08 09:44:08.759  INFO 15212 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Pagamento (class must be instantiated by Interceptor)
+2019-02-08 09:44:08.811  INFO 15212 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Classificacao (class must be instantiated by Interceptor)
+2019-02-08 09:44:08.832  INFO 15212 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Parametro (class must be instantiated by Interceptor)
+2019-02-08 09:44:08.849  INFO 15212 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Fonte (class must be instantiated by Interceptor)
+2019-02-08 09:44:09.009  INFO 15212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 09:44:09.731  INFO 15212 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-08 09:44:10.345  INFO 15212 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1cb4dce1-2be1-4e61-bf33-52a8de4f073a
+
+2019-02-08 09:44:10.530  INFO 15212 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f5e409f, org.springframework.security.web.context.SecurityContextPersistenceFilter@38922698, org.springframework.security.web.header.HeaderWriterFilter@f057751, org.springframework.web.filter.CorsFilter@405845f1, org.springframework.security.web.authentication.logout.LogoutFilter@3450dde0, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@48568401, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c1a649c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@441498c1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59c6d10a, org.springframework.security.web.session.SessionManagementFilter@47147480, org.springframework.security.web.access.ExceptionTranslationFilter@3e9d4d38, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ad508c0]
+2019-02-08 09:44:10.620  INFO 15212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-08 09:44:10.658  INFO 15212 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-08 09:44:10.695  INFO 15212 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-08 09:44:10.829  INFO 15212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-02-08 09:44:10.834  INFO 15212 --- [main] br.com.dscraper.DScraperApplication      : Started DScraperApplication in 8.739 seconds (JVM running for 16.403)
+2019-02-08 09:44:57.792  INFO 15212 --- [http-nio-8083-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-08 09:44:57.793  INFO 15212 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-08 09:44:57.801  INFO 15212 --- [http-nio-8083-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-02-08 10:28:00.568  INFO 14292 --- [main] b.com.dscraper.DScraperApplicationTests  : Starting DScraperApplicationTests on ITB00120 with PID 14292 (started by celio.matos in C:\Users\celio.matos\Downloads\compose\d-scraper)
+2019-02-08 10:28:00.571  INFO 14292 --- [main] b.com.dscraper.DScraperApplicationTests  : No active profile set, falling back to default profiles: default
+2019-02-08 10:28:02.075  INFO 14292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 10:28:02.144  INFO 14292 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 repository interfaces.
+2019-02-08 10:28:02.827  INFO 14292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b82e196] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:28:02.933  INFO 14292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$1430a9d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:28:02.955  INFO 14292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:28:02.959  INFO 14292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@37468787' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:28:02.978  INFO 14292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$39054c82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:28:02.989  INFO 14292 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:28:03.239  INFO 14292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-08 10:28:03.344  INFO 14292 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-08 10:28:04.047  INFO 14292 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 10:28:04.049  INFO 14292 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 10:28:04.052  INFO 14292 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2019-02-08 10:28:04.070  INFO 14292 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2019-02-08 10:28:04.228  INFO 14292 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-02-08 10:28:04.232  INFO 14292 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2019-02-08 10:28:04.235  INFO 14292 --- [main] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2019-02-08 10:28:04.236  INFO 14292 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-02-08 10:28:04.312  INFO 14292 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2019-02-08 10:28:04.581  INFO 14292 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 10:28:04.743  INFO 14292 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 10:28:04.744  INFO 14292 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-08 10:28:04.893  INFO 14292 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 10:28:05.232  INFO 14292 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-02-08 10:28:05.248  INFO 14292 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-02-08 10:28:05.254  INFO 14292 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@333e5fb6
+2019-02-08 10:28:05.683  INFO 14292 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Credor (class must be instantiated by Interceptor)
+2019-02-08 10:28:05.893  INFO 14292 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Orgao (class must be instantiated by Interceptor)
+2019-02-08 10:28:05.940  INFO 14292 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Pagamento (class must be instantiated by Interceptor)
+2019-02-08 10:28:05.992  INFO 14292 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Classificacao (class must be instantiated by Interceptor)
+2019-02-08 10:28:06.014  INFO 14292 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Parametro (class must be instantiated by Interceptor)
+2019-02-08 10:28:06.034  INFO 14292 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Fonte (class must be instantiated by Interceptor)
+2019-02-08 10:28:06.248  INFO 14292 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 10:28:07.057  INFO 14292 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-08 10:28:08.247  INFO 14292 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 69cc077e-ef86-4b57-ae7a-bf9f754dcf2b
+
+2019-02-08 10:28:08.536  INFO 14292 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dc7c5fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@794f937a, org.springframework.security.web.header.HeaderWriterFilter@554e9509, org.springframework.web.filter.CorsFilter@8636cf4, org.springframework.security.web.authentication.logout.LogoutFilter@201b52f7, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@51efdb72, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e663ab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71891d6b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62871522, org.springframework.security.web.session.SessionManagementFilter@7a7f2247, org.springframework.security.web.access.ExceptionTranslationFilter@4c12f54a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@33214124]
+2019-02-08 10:28:08.697  INFO 14292 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-08 10:28:08.751  INFO 14292 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-08 10:28:08.792  INFO 14292 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-08 10:28:08.884  INFO 14292 --- [main] b.com.dscraper.DScraperApplicationTests  : Started DScraperApplicationTests in 8.646 seconds (JVM running for 9.35)
+2019-02-08 10:28:09.021  INFO 14292 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 10:28:09.025  INFO 14292 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-02-08 10:28:09.031  INFO 14292 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-02-08 10:32:51.447  INFO 4116 --- [main] br.com.dscraper.DScraperApplication      : Starting DScraperApplication on ITB00120 with PID 4116 (C:\Users\celio.matos\Downloads\compose\d-scraper\target\classes started by celio.matos in C:\Users\celio.matos\Downloads\compose\d-scraper)
+2019-02-08 10:32:51.450  INFO 4116 --- [main] br.com.dscraper.DScraperApplication      : No active profile set, falling back to default profiles: default
+2019-02-08 10:32:52.390  INFO 4116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-02-08 10:32:52.443  INFO 4116 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2019-02-08 10:32:53.088  INFO 4116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$93c23154] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:32:53.147  INFO 4116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$2c6ff98e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:32:53.161  INFO 4116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:32:53.163  INFO 4116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3ca943b0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:32:53.165  INFO 4116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$51449c40] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:32:53.171  INFO 4116 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-08 10:32:53.911  INFO 4116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-02-08 10:32:53.943  INFO 4116 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-02-08 10:32:53.943  INFO 4116 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2019-02-08 10:32:53.966  INFO 4116 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_171\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\TortoiseGit\bin;C:\PostgreSQL\pg10\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\celio.matos\AppData\Local\Programs\Python\Python37-32\;C:\Users\celio.matos\AppData\Local\Microsoft\WindowsApps;C:\Users\celio.matos\AppData\Roaming\npm;C:\Program Files\Microsoft VS Code\bin;C:\Users\celio.matos\.dotnet\tools;C:\Users\celio.matos\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\celio.matos\AppData\Local\Yarn\bin;.]
+2019-02-08 10:32:54.082  INFO 4116 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-02-08 10:32:54.082  INFO 4116 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2597 ms
+2019-02-08 10:32:54.279  INFO 4116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-02-08 10:32:54.403  INFO 4116 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-02-08 10:32:55.475  INFO 4116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 10:32:55.477  INFO 4116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2019-02-08 10:32:55.479  INFO 4116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2019-02-08 10:32:55.496  INFO 4116 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2019-02-08 10:32:55.615  INFO 4116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2019-02-08 10:32:55.619  INFO 4116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2019-02-08 10:32:55.621  INFO 4116 --- [main] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2019-02-08 10:32:55.622  INFO 4116 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2019-02-08 10:32:55.678  INFO 4116 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2019-02-08 10:32:55.814  INFO 4116 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-02-08 10:32:55.883  INFO 4116 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-02-08 10:32:55.885  INFO 4116 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-02-08 10:32:56.052  INFO 4116 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-02-08 10:32:56.275  INFO 4116 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2019-02-08 10:32:56.306  INFO 4116 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-02-08 10:32:56.312  INFO 4116 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@2c9e377b
+2019-02-08 10:32:56.740  INFO 4116 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Credor (class must be instantiated by Interceptor)
+2019-02-08 10:32:56.978  INFO 4116 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Orgao (class must be instantiated by Interceptor)
+2019-02-08 10:32:57.025  INFO 4116 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Pagamento (class must be instantiated by Interceptor)
+2019-02-08 10:32:57.065  INFO 4116 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Classificacao (class must be instantiated by Interceptor)
+2019-02-08 10:32:57.081  INFO 4116 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Parametro (class must be instantiated by Interceptor)
+2019-02-08 10:32:57.096  INFO 4116 --- [main] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: br.com.dscraper.model.Fonte (class must be instantiated by Interceptor)
+2019-02-08 10:32:57.192  INFO 4116 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-02-08 10:32:57.893  INFO 4116 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-02-08 10:32:58.454  INFO 4116 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d42868ba-42b9-4234-a457-a81d957fc651
+
+2019-02-08 10:32:58.656  INFO 4116 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f2e72d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@2133ce1f, org.springframework.security.web.header.HeaderWriterFilter@1f40624d, org.springframework.web.filter.CorsFilter@77c4461, org.springframework.security.web.authentication.logout.LogoutFilter@41c860a, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@36b62dfd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b96826b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58b7b241, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bf38001, org.springframework.security.web.session.SessionManagementFilter@7083f388, org.springframework.security.web.access.ExceptionTranslationFilter@5ac41a34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bbf27f4]
+2019-02-08 10:32:58.736  INFO 4116 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-02-08 10:32:58.765  INFO 4116 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-02-08 10:32:58.797  INFO 4116 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-02-08 10:32:58.898  INFO 4116 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-02-08 10:32:58.906  INFO 4116 --- [main] br.com.dscraper.DScraperApplication      : Started DScraperApplication in 8.343 seconds (JVM running for 15.612)
+2019-02-08 10:33:10.535  INFO 4116 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-02-08 10:33:10.536  INFO 4116 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-02-08 10:33:10.547  INFO 4116 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-02-08 10:33:11.622 ERROR 4116 --- [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://d-server-auth:8081/oauth/check_token": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:743) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:669) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:578) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.oauth2.provider.token.RemoteTokenServices.postForMap(RemoteTokenServices.java:149) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.token.RemoteTokenServices.loadAuthentication(RemoteTokenServices.java:106) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationManager.authenticate(OAuth2AuthenticationManager.java:83) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:150) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_171]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_171]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:734) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 46 common frames omitted
+
+2019-02-08 10:33:12.637 ERROR 4116 --- [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://d-server-auth:8081/oauth/check_token": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:743) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:669) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:578) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.oauth2.provider.token.RemoteTokenServices.postForMap(RemoteTokenServices.java:149) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.token.RemoteTokenServices.loadAuthentication(RemoteTokenServices.java:106) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationManager.authenticate(OAuth2AuthenticationManager.java:83) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:150) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_171]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_171]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:734) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 43 common frames omitted
+
+2019-02-08 10:33:12.646 ERROR 4116 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://d-server-auth:8081/oauth/check_token": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:743) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:669) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:578) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.oauth2.provider.token.RemoteTokenServices.postForMap(RemoteTokenServices.java:149) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.token.RemoteTokenServices.loadAuthentication(RemoteTokenServices.java:106) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationManager.authenticate(OAuth2AuthenticationManager.java:83) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter.doFilter(OAuth2AuthenticationProcessingFilter.java:150) ~[spring-security-oauth2-2.3.3.RELEASE.jar:na]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.1.3.RELEASE.jar:5.1.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_171]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.14.jar:9.0.14]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_171]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[na:1.8.0_171]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_171]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_171]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_171]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_171]
+	at java.net.Socket.connect(Socket.java:538) ~[na:1.8.0_171]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_171]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_171]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_171]
+	at org.springframework.http.client.SimpleBufferingClientHttpRequest.executeInternal(SimpleBufferingClientHttpRequest.java:76) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:734) ~[spring-web-5.1.4.RELEASE.jar:5.1.4.RELEASE]
+	... 43 common frames omitted
+
