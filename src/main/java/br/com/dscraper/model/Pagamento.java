@@ -1,7 +1,8 @@
 package br.com.dscraper.model;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -12,9 +13,10 @@ import java.util.Date;
 @Setter
 @Getter
 @Entity
-@AllArgsConstructor
+@Builder
+@NoArgsConstructor
 @Table(name = "pagamento", schema = "scraper")
-public class Pagamento  implements Serializable {
+public class Pagamento implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,6 +1,6 @@
 package br.com.dscraper.model;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +13,7 @@ import java.io.Serializable;
 @Setter
 @Getter
 @Entity
-@AllArgsConstructor
+@Builder
 @Table(name = "parametro", schema = "scraper")
 public class Parametro implements Serializable {
 

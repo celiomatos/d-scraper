@@ -1,7 +1,8 @@
 package br.com.dscraper.model;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,7 +11,8 @@ import java.io.Serializable;
 @Setter
 @Getter
 @Entity
-@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Table(name = "orgao", schema = "scraper")
 public class Orgao implements Serializable {
 

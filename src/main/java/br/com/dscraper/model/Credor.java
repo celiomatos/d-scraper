@@ -1,7 +1,8 @@
 package br.com.dscraper.model;
 
-import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,7 +11,8 @@ import java.io.Serializable;
 @Setter
 @Getter
 @Entity
-@AllArgsConstructor
+@Builder
+@NoArgsConstructor
 @Table(name = "credor", schema = "scraper")
 public class Credor implements Serializable {
 
@@ -24,4 +26,8 @@ public class Credor implements Serializable {
 
     @Column(name = "cre_codigo", length = 20)
     private String codigo;
+
+    public Credor(Long id) {
+        this.id = id;
+    }
 }
