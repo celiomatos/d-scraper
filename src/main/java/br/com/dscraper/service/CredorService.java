@@ -22,4 +22,8 @@ public class CredorService {
     public Credor save(Credor credor) {
         return credorRepository.save(credor);
     }
+
+    public Optional<Credor> findByCodigo(String codigo) {
+        return credorRepository.findByCodigo(codigo);
+    }
 }

@@ -1,9 +1,6 @@
 package br.com.dscraper.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,6 +12,7 @@ import java.io.Serializable;
 @Getter
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Table(name = "fonte", schema = "scraper")
 public class Fonte implements Serializable {

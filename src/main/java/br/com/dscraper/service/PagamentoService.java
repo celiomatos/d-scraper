@@ -165,7 +165,7 @@ public class PagamentoService {
                     chave2.append(p.get(i).getNrNl());
                     chave2.append(p.get(i).getNrNe());
                     chave2.append(p.get(i).getFonte().getId());
-                    chave2.append(p.get(i).getClassificacao().getNome());
+                    chave2.append(p.get(i).getClassificacao().getCodigo());
                     chave2.append(p.get(i).getValor().toString());
 
                     if (chave1.toString().equalsIgnoreCase(chave2.toString())) {
@@ -303,16 +303,16 @@ public class PagamentoService {
     }
 
     /**
-     * @param nome
+     * @param codigo
      * @return
      */
-    private Classificacao getClassificacao(String nome) {
+    private Classificacao getClassificacao(String codigo) {
 
-        Optional<Classificacao> optClassificacao = classificacaoService.findByNome(nome);
+        Optional<Classificacao> optClassificacao = classificacaoService.findByCodigo(codigo);
         if (!optClassificacao.isPresent()) {
             Classificacao classificacao = Classificacao.builder()
-                    .nome(nome)
-                    .codigo("")
+                    .codigo(codigo)
+                    .nome("X")
                     .build();
 
             return classificacaoService.save(classificacao);

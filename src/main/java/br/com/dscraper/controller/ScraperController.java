@@ -1,6 +1,8 @@
 package br.com.dscraper.controller;
 
+import br.com.dscraper.service.EmpenhoService;
 import br.com.dscraper.service.PagamentoService;
+import br.com.dscraper.util.MyConstant;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +18,31 @@ public class ScraperController {
     @Autowired
     private PagamentoService pagamentoService;
 
+    @Autowired
+    private EmpenhoService empenhoService;
+
     @ApiOperation("Update actual payment ")
     @GetMapping("/pagamento-mes-atual")
     public void pagamentoMesAtual() {
         pagamentoService.updateBySchedule(true);
     }
 
-    @ApiOperation("Update lasts payment ")
+    @ApiOperation("Update last payment ")
     @GetMapping("/pagamento-mes-anterior")
     public void pagamentoMesAnterior() {
         pagamentoService.updateBySchedule(false);
     }
+
+    @ApiOperation("Update empneho ")
+    @GetMapping("/empenho-ano-atual")
+    public void empenhoAnoAtual() {
+        empenhoService.updateBySchedule(MyConstant.EMPENHO_ANO_ATUAL);
+    }
+
+    @ApiOperation("Update empenho ")
+    @GetMapping("/empenho-anos-anteriores")
+    public void empenhoAnoAnterior() {
+        empenhoService.updateBySchedule(MyConstant.EMPENHO_ANOS_ANTERIORES);
+    }
+
 }

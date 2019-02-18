@@ -10,4 +10,6 @@ import java.util.Optional;
 public interface CredorRepository extends JpaRepository<Credor, Long> {
 
     Optional<Credor> findByNome(String nome);
+
+    Optional<Credor> findByCodigo(String codigo);
 }

@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface ClassificacaoRepository extends JpaRepository<Classificacao, Long> {
 
-    Optional<Classificacao> findByNome(String nome);
+    Optional<Classificacao> findByCodigo(String codigo);
 }

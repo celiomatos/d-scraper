@@ -39,3 +39,10 @@ for each row
 --changeset celio:91
 
 SET constraint_exclusion = on;
+
+--changeset celio:90
+
+inset into scraper.parametro(par_id, par_descricao, par_atual, par_padrao)
+    values (2, 'PAGAMENTO MESES ANTERIORES', '01/2019', 'MM/yyyy');
+
+--rollback delete from scraper.parametro where par_id = 2;

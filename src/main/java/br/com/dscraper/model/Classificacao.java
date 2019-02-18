@@ -1,9 +1,6 @@
 package br.com.dscraper.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -12,6 +9,7 @@ import java.io.Serializable;
 @Getter
 @Entity
 @Builder
+@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "classificacao", schema = "scraper")
 public class Classificacao implements Serializable {

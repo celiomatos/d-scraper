@@ -12,7 +12,7 @@ import java.util.List;
 public interface PagamentoRepository extends JpaRepository<Pagamento, Long> {
 
     @Query("select t from Pagamento t where t.orgao.codigo = ?1 " +
-            "and t.dtpagamento >= ?2 and t.dtpagamento <= ?3 " +
+            "and t.data >= ?2 and t.data <= ?3 " +
             "and t.removido = false order by t.credor.nome")
     List<Pagamento> getPagamentos(String orgao, Date inicio, Date fim);
 }

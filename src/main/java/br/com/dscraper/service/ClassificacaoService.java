@@ -13,8 +13,8 @@ public class ClassificacaoService {
     @Autowired
     private ClassificacaoRepository classificacaoRepository;
 
-    Optional<Classificacao> findByNome(String nome) {
-        return classificacaoRepository.findByNome(nome);
+    Optional<Classificacao> findByCodigo(String codigo) {
+        return classificacaoRepository.findByCodigo(codigo);
     }
 
     public Classificacao save(Classificacao classificacao) {
