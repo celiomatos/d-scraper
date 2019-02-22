@@ -7,13 +7,13 @@ import java.util.List;
 
 @Getter
 @Setter
-public class NotaEmpenhoDto {
+public class EmpenhoDto {
 
     private String dataEmissao;
     private String vaDocumento;
     private String coCredor;
     private String tipoEmpenho;
-    private String programaTrabalho;
+    private String programa;
     private String funcao;
     private String subFuncao;
     private String naturezaDespesa;

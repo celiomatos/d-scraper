@@ -1,7 +1,7 @@
 package br.com.dscraper.service;
 
 import br.com.dscraper.dto.NeReforcoAnulacaoDto;
-import br.com.dscraper.dto.NotaEmpenhoDto;
+import br.com.dscraper.dto.EmpenhoDto;
 import br.com.dscraper.dto.OrgaoDto;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -78,7 +78,7 @@ public class EmpenhoSiteService {
      * @param orgao
      * @return
      */
-    public List<NotaEmpenhoDto> getNotasEmpenho(String ano, String orgao, long pr) {
+    public List<EmpenhoDto> getNotasEmpenho(String ano, String orgao, long pr) {
 
         StringBuilder url = new StringBuilder();
         url.append("http://sistemas.sefaz.am.gov.br/transpprd/mnt/despesa/");
@@ -88,7 +88,7 @@ public class EmpenhoSiteService {
         url.append(ano);
         url.append("&copoder=0&grupo=1&consulta=1&mes=00");
 
-        List<NotaEmpenhoDto> result = new ArrayList<>();
+        List<EmpenhoDto> result = new ArrayList<>();
 
         Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(Level.OFF);
         Logger.getLogger("org.apache.http").setLevel(Level.OFF);
@@ -106,7 +106,7 @@ public class EmpenhoSiteService {
         // se houver notas de reforco fica falso ate o termino dos reforcos
         boolean loop = true;
 
-        NotaEmpenhoDto bean = null;
+        EmpenhoDto bean = null;
         List<NeReforcoAnulacaoDto> list = new LinkedList<>();
 
         do {
@@ -228,9 +228,9 @@ public class EmpenhoSiteService {
      * @param ne
      * @return
      */
-    private NotaEmpenhoDto setBean(HtmlPage page, String ne, String orgao, String ano) {
+    private EmpenhoDto setBean(HtmlPage page, String ne, String orgao, String ano) {
 
-        NotaEmpenhoDto bean = new NotaEmpenhoDto();
+        EmpenhoDto bean = new EmpenhoDto();
         bean.setOrgao(orgao);
         bean.setAno(ano);
         bean.setNuEmpenho(ne);
@@ -248,7 +248,7 @@ public class EmpenhoSiteService {
         bean.setTipoEmpenho(tipoEmpenho.getAttribute("value"));
 
         HtmlElement pT = page.getElementByName("pt");
-        bean.setProgramaTrabalho(pT.getAttribute("value"));
+        bean.setPrograma(pT.getAttribute("value"));
 
         HtmlElement funcao = page.getElementByName("funcao");
         bean.setFuncao(funcao.getAttribute("value"));

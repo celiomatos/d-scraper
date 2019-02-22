@@ -20,6 +20,12 @@ public class OrgaoService {
     @Autowired
     private OrgaoRepository orgaoRepository;
 
+    /**
+     *
+     * @param dtInicial
+     * @param dtFinal
+     * @return
+     */
     public List<OrgaoValorDto> getOrgaoValueByDate(Date dtInicial, Date dtFinal) {
 
         List<Object[]> lst = orgaoRepository.getOrgaoValueByDate(

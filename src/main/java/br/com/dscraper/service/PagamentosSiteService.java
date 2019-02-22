@@ -18,6 +18,11 @@ import java.util.logging.Logger;
 @Service
 public class PagamentosSiteService {
 
+    /**
+     * @param mes
+     * @param ano
+     * @return
+     */
     public List<OrgaoValorDto> getOrgaoValue(String mes, String ano) {
 
         List<OrgaoValorDto> lst = new LinkedList<>();
@@ -71,6 +76,12 @@ public class PagamentosSiteService {
         return lst;
     }
 
+    /**
+     * @param orgaos
+     * @param mes
+     * @param ano
+     * @return
+     */
     public List<OrgaoValorDto> getPagamentos(List<OrgaoValorDto> orgaos, String mes, String ano) {
 
         StringBuilder url = new StringBuilder();

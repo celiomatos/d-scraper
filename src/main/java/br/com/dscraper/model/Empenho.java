@@ -30,8 +30,8 @@ public class Empenho implements Serializable {
     @Column(name = "emp_tipo" ,length = 250)
     private String tipo;
 
-    @Column(name = "emp_programa_trabalho", length = 250)
-    private String programaTrabalho;
+    @Column(name = "emp_programa", length = 250)
+    private String programa;
 
     @Column(name = "emp_funcao", length = 250)
     private String funcao;

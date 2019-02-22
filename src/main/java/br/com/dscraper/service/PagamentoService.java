@@ -190,6 +190,11 @@ public class PagamentoService {
         persist(lstfinal, removidos);
     }
 
+    /**
+     *
+     * @param pagamentos
+     * @param removidos
+     */
     private void persist(List<OrgaoValorDto> pagamentos, List<Pagamento> removidos) {
 
         if (!removidos.isEmpty()) {
