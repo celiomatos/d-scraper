@@ -100,13 +100,19 @@ public class PagamentosSiteService {
             try (WebClient wc = new WebClient(BrowserVersion.BEST_SUPPORTED)) {
                 // filtrando por orgao
                 HtmlPage page = null;
+                log.info(url.toString() + orgao.getCodigo());
                 try {
                     page = wc.getPage(url.toString() + orgao.getCodigo());
                 } catch (Exception ex) {
                     log.error(ex.getMessage());
                 }
                 if (page != null) {
-                    HtmlTable table = page.getHtmlElementById("item");
+                    HtmlTable table = null;
+                    try {
+                        table = page.getHtmlElementById("item");
+                    } catch (Exception ex) {
+                        log.error(ex.getMessage());
+                    }
                     if (table != null) {
                         // todos os pagamentos do orgao
                         DomNodeList<HtmlElement> rows = table.getElementsByTagName("tr");

@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -70,7 +71,7 @@ public class EmpenhoService {
 
                 Empenho empenho = getEmpenho(ne, optOrgao.get());
 
-                if (empenho != null) {
+                if (empenho.getId() != 0L) {
                     empenhoDespesaService.save(ne, empenho);
 
                     List<NeReforcoAnulacaoDto> list = ne.getAnuladaReforcada();
@@ -90,7 +91,6 @@ public class EmpenhoService {
      */
     private Empenho getEmpenho(EmpenhoDto ne, Orgao o) {
 
-        long idOrgao = o.getId();
         Empenho empenho = null;
 
         // credores
@@ -99,7 +99,7 @@ public class EmpenhoService {
             // fontes
             Fonte fonte = fonteService.getOrCreateFonte(ne.getFonte());
             if (fonte != null) {
-                Optional<Empenho> optEmpenho = findByNotaAndOrgaoId(ne.getNuEmpenho(), idOrgao);
+                Optional<Empenho> optEmpenho = findByNotaAndOrgaoId(ne.getNuEmpenho(), o.getId());
 
                 empenho = optEmpenho.orElseGet(Empenho::new);
                 empenho.setData(DateUtil.strToDate(ne.getDataEmissao()));
@@ -115,8 +115,10 @@ public class EmpenhoService {
                 empenho.setOrgao(o);
                 empenho.setCredor(credor);
                 empenho.setFonte(fonte);
-
-                empenho = empenhoRepository.save(empenho);
+                if (empenho.getId() == 0L) {
+                    empenho.setLancamento(new Date());
+                }
+                return empenhoRepository.save(empenho);
             }
         }
 

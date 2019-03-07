@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,34 +26,32 @@ public class EmpenhoOriginalService {
 
     /**
      * @param lst
-     * @param empenho
+     * @param original
      * @param orgao
      */
-    public void setReforcoAnulacao(List<NeReforcoAnulacaoDto> lst, Empenho empenho, Orgao orgao) {
+    public void setReforcoAnulacao(List<NeReforcoAnulacaoDto> lst, Empenho original, Orgao orgao) {
 
-        long idNeOriginal = empenho.getId();
 
-        lst.forEach((NeReforcoAnulacaoDto bean) -> {
-
-            Optional<Empenho> optEmpenho = empenhoService.findByNotaAndOrgaoId(
+        for (NeReforcoAnulacaoDto bean : lst) {
+            Optional<Empenho> optReforco = empenhoService.findByNotaAndOrgaoId(
                     bean.getNeReforcadaAnulada(), orgao.getId());
 
-            if (optEmpenho.isPresent()) {
-
-                long idNeReforco = optEmpenho.get().getId();
+            if (optReforco.isPresent()) {
 
                 Optional<EmpenhoOriginal> optEmpenhoOriginal = empenhoOriginalRepository
-                        .findByOriginalIdAndReforcoId(idNeOriginal, idNeReforco);
+                        .findByOriginalIdAndReforcoId(original.getId(), optReforco.get().getId());
 
                 EmpenhoOriginal eo = optEmpenhoOriginal.orElseGet(EmpenhoOriginal::new);
                 eo.setDescricao(bean.getDescricao());
                 eo.setEvento(bean.getEvento());
-                eo.setReforco(optEmpenho.get());
-                eo.setOriginal(empenho);
+                eo.setReforco(optReforco.get());
+                eo.setOriginal(original);
                 eo.setValor(NumberUtil.strToBigDecimal(bean.getValor()));
-
+                if (eo.getId() == 0L) {
+                    eo.setLancamento(new Date());
+                }
                 empenhoOriginalRepository.save(eo);
             }
-        });
+        }
     }
 }

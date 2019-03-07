@@ -58,4 +58,9 @@ public class DateUtil {
         return date;
     }
 
+
+    public static java.sql.Date utilDateToSqlDate(Date date){
+        return new java.sql.Date(date.getTime());
+    }
+
 }

@@ -17,7 +17,7 @@ public class Orgao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "org_id", nullable = false)
-    private Long id;
+    private long id;
 
     @Column(name = "org_codigo", length = 6)
     private String codigo;

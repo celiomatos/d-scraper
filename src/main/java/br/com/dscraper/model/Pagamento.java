@@ -19,7 +19,7 @@ public class Pagamento implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pag_id", nullable = false)
-    private Integer id;
+    private long id;
 
     @Column(name = "pag_date", nullable = false)
     @Temporal(TemporalType.DATE)
@@ -45,19 +45,19 @@ public class Pagamento implements Serializable {
     private boolean removido;
 
     @JoinColumn(name = "pag_cla_id")
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Classificacao classificacao;
 
     @JoinColumn(name = "pag_cre_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Credor credor;
 
     @JoinColumn(name = "pag_fon_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Fonte fonte;
 
     @JoinColumn(name = "pag_org_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Orgao orgao;
 
 }

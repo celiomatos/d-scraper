@@ -33,14 +33,14 @@ public class ScraperController {
         pagamentoService.updateBySchedule(false);
     }
 
-    @ApiOperation("Update empneho ")
+    @ApiOperation("Update empenho ")
     @GetMapping("/empenho-ano-atual")
     public void empenhoAnoAtual() {
         empenhoService.updateBySchedule(MyConstant.EMPENHO_ANO_ATUAL);
     }
 
     @ApiOperation("Update empenho ")
-    @GetMapping("/empenho-anos-anteriores")
+    @GetMapping("/empenho-ano-anterior")
     public void empenhoAnoAnterior() {
         empenhoService.updateBySchedule(MyConstant.EMPENHO_ANOS_ANTERIORES);
     }

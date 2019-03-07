@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Setter
 @Getter
@@ -18,7 +19,7 @@ public class EmpenhoOriginal implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ori_id", nullable = false)
-    private Integer id;
+    private long id;
 
     @Column(name = "ori_evento", length = 15, nullable = false)
     private String evento;
@@ -29,12 +30,16 @@ public class EmpenhoOriginal implements Serializable {
     @Column(name = "ori_descricao", length = 100000)
     private String descricao;
 
-    @JoinColumn(name = "ori_emp_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @Column(name = "ori_lancamento", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lancamento;
+
+    @JoinColumn(name = "ori_emp_ref_id")
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Empenho reforco;
 
-    @JoinColumn(name = "ori_emp_ori")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "ori_emp_ori_id")
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Empenho original;
 
 }

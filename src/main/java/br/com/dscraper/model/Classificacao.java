@@ -17,7 +17,7 @@ public class Classificacao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cla_id", nullable = false)
-    private Long id;
+    private long id;
 
     @Column(name = "cla_codigo", length = 10)
     private String codigo;

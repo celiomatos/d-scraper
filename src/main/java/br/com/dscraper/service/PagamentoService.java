@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Slf4j
@@ -143,39 +144,41 @@ public class PagamentoService {
 
             List<PagamentoDto> pagamentos = new ArrayList<>();
 
-            for (PagamentoDto b : orgao.getPagamentos()) {
-                StringBuilder chave1 = new StringBuilder();
-                chave1.append(StringUtil.removerAcento(b.getCredor()).toUpperCase());
-                chave1.append(b.getData());
-                chave1.append(b.getNrOb());
-                chave1.append(b.getNrNl());
-                chave1.append(b.getNrNe());
-                chave1.append(b.getFonte());
-                chave1.append(b.getClassificacao());
-                String value = b.getValor().replaceAll("[,]", "");
-                b.setValor(value);
-                chave1.append(value);
+            if (orgao.getPagamentos() != null && !orgao.getPagamentos().isEmpty()) {
+                for (PagamentoDto b : orgao.getPagamentos()) {
+                    StringBuilder chave1 = new StringBuilder();
+                    chave1.append(StringUtil.removerAcento(b.getCredor()).toUpperCase());
+                    chave1.append(b.getData());
+                    chave1.append(b.getNrOb());
+                    chave1.append(b.getNrNl());
+                    chave1.append(b.getNrNe());
+                    chave1.append(b.getFonte());
+                    chave1.append(b.getClassificacao());
+                    String value = b.getValor().replaceAll("[,]", "");
+                    b.setValor(value);
+                    chave1.append(value);
 
-                boolean achou = false;
-                for (int i = 0; i < p.size(); i++) {
-                    StringBuilder chave2 = new StringBuilder();
-                    chave2.append(StringUtil.removerAcento(p.get(i).getCredor().getNome()).toUpperCase());
-                    chave2.append(DateUtil.formatDateBr(p.get(i).getData()));
-                    chave2.append(p.get(i).getNrOb());
-                    chave2.append(p.get(i).getNrNl());
-                    chave2.append(p.get(i).getNrNe());
-                    chave2.append(p.get(i).getFonte().getId());
-                    chave2.append(p.get(i).getClassificacao().getCodigo());
-                    chave2.append(p.get(i).getValor().toString());
+                    boolean achou = false;
+                    for (int i = 0; i < p.size(); i++) {
+                        StringBuilder chave2 = new StringBuilder();
+                        chave2.append(StringUtil.removerAcento(p.get(i).getCredor().getNome()).toUpperCase());
+                        chave2.append(new SimpleDateFormat("yyyyMMdd").format(p.get(i).getData()));
+                        chave2.append(p.get(i).getNrOb());
+                        chave2.append(p.get(i).getNrNl());
+                        chave2.append(p.get(i).getNrNe());
+                        chave2.append(p.get(i).getFonte().getId());
+                        chave2.append(p.get(i).getClassificacao().getCodigo());
+                        chave2.append(p.get(i).getValor().toString());
 
-                    if (chave1.toString().equalsIgnoreCase(chave2.toString())) {
-                        achou = true;
-                        p.remove(i);
-                        break;
+                        if (chave1.toString().equalsIgnoreCase(chave2.toString())) {
+                            achou = true;
+                            p.remove(i);
+                            break;
+                        }
                     }
-                }
-                if (!achou) {
-                    pagamentos.add(b);
+                    if (!achou) {
+                        pagamentos.add(b);
+                    }
                 }
             }
             if (!p.isEmpty()) {
@@ -191,7 +194,6 @@ public class PagamentoService {
     }
 
     /**
-     *
      * @param pagamentos
      * @param removidos
      */
@@ -276,10 +278,11 @@ public class PagamentoService {
      */
     private Credor getCredor(String nome) {
 
+        nome = StringUtil.removerAcento(nome).toUpperCase();
         Optional<Credor> optCredor = credorService.findByNome(nome);
         if (!optCredor.isPresent()) {
             Credor credor = Credor.builder()
-                    .nome(StringUtil.removerAcento(nome).toUpperCase())
+                    .nome(nome)
                     .build();
 
             return credorService.save(credor);

@@ -1,8 +1,6 @@
 package br.com.dscraper.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,12 +12,14 @@ import java.io.Serializable;
 @Getter
 @Entity
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "parametro", schema = "scraper")
 public class Parametro implements Serializable {
 
     @Id
     @Column(name = "par_id", nullable = false)
-    private Integer id;
+    private long id;
 
     @Column(name = "par_descricao", nullable = false, length = 100)
     private String descricao;

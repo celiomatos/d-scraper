@@ -36,10 +36,10 @@ public class ParametroService {
 
         String result = null;
 
-        Parametro p = parametroRepository.getOne(MyConstant.PAGAMENTO);
+        Optional<Parametro> p = parametroRepository.findById(MyConstant.PAGAMENTO);
 
-        if (p != null) {
-            result = getMesAno(p, 1);
+        if (p.isPresent()) {
+            result = getMesAno(p.get(), 1);
         }
         return result;
     }
@@ -89,11 +89,11 @@ public class ParametroService {
      */
     public String getParametroEmpenho(long pr) {
         String result = null;
-        Parametro p = parametroRepository.getOne(pr);
+        Optional<Parametro> p = parametroRepository.findById(pr);
 
-        if (p.getId() != null) {
+        if (p.isPresent()) {
             // dados atuais
-            String paramentros = p.getAtual();
+            String paramentros = p.get().getAtual();
             // separando ano e orgaos
             String dados[] = paramentros.split("[-]");
 
@@ -136,13 +136,8 @@ public class ParametroService {
 
                     paramentros = ano + "-2-" + o.toString();
                 }
-                // editando os paramentros com novos valores
-                try {
-                    p.setAtual(paramentros);
-                    parametroRepository.save(p);
-                } catch (Exception ex) {
-                    log.error(ex.getMessage());
-                }
+                p.get().setAtual(paramentros);
+                parametroRepository.save(p.get());
             }
 
             result = ano + orgao;
@@ -164,7 +159,7 @@ public class ParametroService {
             o.setOrgName(b.getNome());
             o.setSigla(b.getSigla());
 
-            if (o.getId() == null) {
+            if (o.getId() == 0L) {
                 o.setNome(b.getNome());
             }
             orgaoService.save(o);
@@ -178,9 +173,9 @@ public class ParametroService {
     public int getIndexEmpenho(long pr) {
 
         int result = 2;
-        Parametro p = parametroRepository.getOne(pr);
+        Optional<Parametro> p = parametroRepository.findById(pr);
         // dados atuais
-        String paramentros = p.getAtual();
+        String paramentros = p.get().getAtual();
         // separando ano e orgaos
         String dados[] = paramentros.split("[-]");
         result = Integer.parseInt(dados[1]);
@@ -190,15 +185,15 @@ public class ParametroService {
 
     public void setIndexEmpenho(long pr, int idx) {
 
-        Parametro p = parametroRepository.getOne(pr);
+        Optional<Parametro> p = parametroRepository.findById(pr);
 
 
         // dados atuais
-        String paramentros = p.getAtual();
+        String paramentros = p.get().getAtual();
         // separando ano e orgaos
         String d[] = paramentros.split("[-]");
         if (idx > 2) {
-            p.setAtual(d[0] + "-" + idx + "-" + d[2]);
+            p.get().setAtual(d[0] + "-" + idx + "-" + d[2]);
         } else {
             // se ainda existe orgao para coleta de notas de empenho
             paramentros = d[2];
@@ -207,13 +202,10 @@ public class ParametroService {
             paramentros = paramentros.replace(orgao + ";", "");
             // repetindo caso este seja o ultimo orgao
             paramentros = paramentros.replace(orgao, "");
-            p.setAtual(d[0] + "-2-" + paramentros);
+            p.get().setAtual(d[0] + "-2-" + paramentros);
         }
-        try {
-            parametroRepository.save(p);
-        } catch (Exception ex) {
-            log.error(ex.getMessage());
-        }
+
+        parametroRepository.save(p.get());
     }
 
 }

@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,8 +31,8 @@ public class OrgaoService {
     public List<OrgaoValorDto> getOrgaoValueByDate(Date dtInicial, Date dtFinal) {
 
         List<Object[]> lst = orgaoRepository.getOrgaoValueByDate(
-                DateUtil.formatDateBr(dtInicial),
-                DateUtil.formatDateBr(dtFinal));
+                 DateUtil.utilDateToSqlDate(dtInicial),
+                DateUtil.utilDateToSqlDate(dtFinal));
 
         List<OrgaoValorDto> result = new LinkedList<>();
 

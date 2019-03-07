@@ -19,7 +19,7 @@ public class EmpenhoDespesa implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "des_id", nullable = false)
-    private Integer id;
+    private long id;
 
     @Column(name = "des_ano", length = 4, nullable = false)
     private String ano;
@@ -27,15 +27,16 @@ public class EmpenhoDespesa implements Serializable {
     @Column(name = "des_valor", nullable = false)
     private BigDecimal valor;
 
-    @Column(name = "des_natureza", length = 250)
-    private String natureza;
+    @JoinColumn(name = "des_cla_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Classificacao natureza;
 
     @Column(name = "des_lancamento", nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
-    private Date dtlancamento;
+    private Date lancamento;
 
     @JoinColumn(name = "des_emp_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Empenho empenho;
 
 }

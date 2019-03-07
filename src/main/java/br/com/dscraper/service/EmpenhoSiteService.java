@@ -1,7 +1,7 @@
 package br.com.dscraper.service;
 
-import br.com.dscraper.dto.NeReforcoAnulacaoDto;
 import br.com.dscraper.dto.EmpenhoDto;
+import br.com.dscraper.dto.NeReforcoAnulacaoDto;
 import br.com.dscraper.dto.OrgaoDto;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -126,7 +126,13 @@ public class EmpenhoSiteService {
                     loop = true;
                 } else {
                     //tabela de ne
-                    DomElement tab = page.getElementById("item");
+
+                    DomElement tab = null;
+                    try {
+                        tab = page.getElementById("item");
+                    } catch (Exception ex) {
+                        log.error(ex.getMessage());
+                    }
                     if (tab != null) {
 
                         DomNodeList<HtmlElement> rows = tab.getElementsByTagName("tr");
@@ -150,11 +156,15 @@ public class EmpenhoSiteService {
                         } catch (Exception ex) {
                             idxItems = 1;
                             loop = true;
-                            ex.printStackTrace(System.err);
+                            log.error(ex.getMessage());
                         }
 
-                        DomElement negativa = page.getElementById("negativa");
-
+                        DomElement negativa = null;
+                        try {
+                            negativa = page.getElementById("negativa");
+                        } catch (Exception ex) {
+                            log.error(ex.getMessage());
+                        }
                         if (detalhe == null || negativa != null) {
                             idxItems = 1;
                             loop = true;
@@ -165,8 +175,12 @@ public class EmpenhoSiteService {
                             }
 
                             // tabela reforco anulacao
-                            DomElement ra = detalhe.getElementById("item");
-
+                            DomElement ra = null;
+                            try {
+                                ra = detalhe.getElementById("item");
+                            } catch (Exception ex) {
+                                log.error(ex.getMessage());
+                            }
                             if (ra != null) {
 
                                 DomNodeList<HtmlElement> rra = ra.getElementsByTagName("tr");
@@ -276,5 +290,4 @@ public class EmpenhoSiteService {
 
         return bean;
     }
-
 }
