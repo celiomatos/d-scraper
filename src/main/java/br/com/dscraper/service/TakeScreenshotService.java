@@ -19,6 +19,7 @@ public class TakeScreenshotService {
 
     /**
      * take Screenshot.
+     *
      * @param url www.
      */
     public void takeScreenshot(String url) {
@@ -32,10 +33,11 @@ public class TakeScreenshotService {
                     PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
                     phantomjsExeutableFilePath);
 
-            caps.setCapability("takesScreenshot", true);
+            caps.setCapability("takesScreenshot", false);
 
             PhantomJSDriver driver = new PhantomJSDriver(caps);
             driver.manage().window().maximize();
+
             driver.get(url);
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

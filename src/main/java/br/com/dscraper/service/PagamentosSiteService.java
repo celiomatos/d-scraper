@@ -6,7 +6,6 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,9 +17,6 @@ import java.util.logging.Logger;
 @Slf4j
 @Service
 public class PagamentosSiteService {
-
-    @Autowired
-    private TakeScreenshotService takeScreenshotService;
 
     /**
      * @param mes
@@ -51,8 +47,6 @@ public class PagamentosSiteService {
             } catch (Exception ex) {
                 log.error(ex.getMessage());
             }
-
-            takeScreenshotService.takeScreenshot(url.toString());
 
             if (page != null) {
 
@@ -112,8 +106,6 @@ public class PagamentosSiteService {
                 } catch (Exception ex) {
                     log.error(ex.getMessage());
                 }
-
-                takeScreenshotService.takeScreenshot(url.toString() + orgao.getCodigo());
 
                 if (page != null) {
                     HtmlTable table = null;
