@@ -58,36 +58,19 @@
 			<artifactId>htmlunit</artifactId>
 			<version>2.33</version>
 		</dependency>
-		<!-- SWAGGER : begin -->
+		<!-- phantomjs: start -->
 		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger2</artifactId>
-			<version>2.8.0</version>
-			<scope>compile</scope>
+			<groupId>com.codeborne</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>1.4.1</version>
 		</dependency>
-		<dependency>
-			<groupId>io.springfox</groupId>
-			<artifactId>springfox-swagger-ui</artifactId>
-			<version>2.8.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<!-- SWAGGER : end -->
-		<!-- oauth2: begin -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security.oauth</groupId>
-			<artifactId>spring-security-oauth2</artifactId>
-			<version>2.3.3.RELEASE</version>
-		</dependency>
-		<!-- oauth2: end -->
+		<!--<dependency>-->
+			<!--<groupId>org.seleniumhq.selenium</groupId>-->
+			<!--<artifactId>selenium-api</artifactId>-->
+			<!--<version>2.39.0</version>-->
+			<!--<type>jar</type>-->
+		<!--</dependency>-->
+		<!-- phantomjs: end -->
 	</dependencies>
 
 	<build>
