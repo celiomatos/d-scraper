@@ -50,8 +50,12 @@ public class PagamentosSiteService {
 
             if (page != null) {
 
-                HtmlTable table = page.getHtmlElementById("item");
-
+                HtmlTable table = null;
+                try {
+                    table = page.getHtmlElementById("item");
+                } catch (Exception ex) {
+                    log.error(ex.getMessage());
+                }
                 if (table != null) {
                     DomNodeList<HtmlElement> rows = table.getElementsByTagName("tr");
                     for (int i = 2; i < rows.size(); i++) {
