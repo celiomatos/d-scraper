@@ -94,3 +94,4 @@ buildNumber.properties
 *.gz
 
 # End of https://www.gitignore.io/api/maven,intellij
+/*.log
