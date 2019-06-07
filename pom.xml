@@ -58,19 +58,6 @@
 			<artifactId>htmlunit</artifactId>
 			<version>2.33</version>
 		</dependency>
-		<!-- phantomjs: start -->
-		<dependency>
-			<groupId>com.codeborne</groupId>
-			<artifactId>phantomjsdriver</artifactId>
-			<version>1.4.1</version>
-		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.seleniumhq.selenium</groupId>-->
-			<!--<artifactId>selenium-api</artifactId>-->
-			<!--<version>2.39.0</version>-->
-			<!--<type>jar</type>-->
-		<!--</dependency>-->
-		<!-- phantomjs: end -->
 	</dependencies>
 
 	<build>
