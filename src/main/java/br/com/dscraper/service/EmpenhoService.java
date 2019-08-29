@@ -48,6 +48,7 @@ public class EmpenhoService {
      * @param pr
      */
     public void updateBySchedule(long pr) {
+        log.info("Rodando Atualizacao do empho atual");
         String p = parametroService.getParametroEmpenho(pr);
         if (p != null) {
             String ano = p.substring(0, 4);

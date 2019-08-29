@@ -116,10 +116,11 @@ public class EmpenhoSiteService {
                 HtmlPage page = null;
                 try {
                     page = wc.getPage(url.toString());
+                    log.info(url.toString());
                 } catch (Exception ex) {
                     idxItems = 1;
                     loop = true;
-                    ex.printStackTrace(System.err);
+                    log.error(ex.getMessage());
                 }
                 if (page == null) {
                     idxItems = 1;
